@@ -1,26 +1,30 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "@fontsource/macondo-swash-caps";
+import "@fontsource-variable/lora";
 
 const Nav = () => {
-  const [navRespon, setNavRespon] = useState(false);
+  const [navRespon, setNavRespon] = useState(true);
 
   const handleClickNav = () => {
     setNavRespon(!navRespon);
-    console.log("No funciona");
   };
 
   return (
     <>
-      <i
-        onClick={handleClickNav}
-        className="bx bx-menu md:hidden cursor-pointer bg-slate-400/25 p-1 rounded-[3px] text-xl"
-      ></i>
       <nav
-        className={` text-white  ${
-          navRespon ? "left-0 z-50 min-h-screen" : "-left-full  bg-red-50 "
-        } duration-300 flex flex-col gap-5 font-[600] bg-[#f5f0e8] min-h-screen w-full justify-center items-center text-3xl md:static md:flex md:flex-row md:gap-10 md:w-auto md:min-h-0 md:bg-transparent md:text-base md:items-center md:text-white md:p-0`}
+        style={{
+          fontFamily: "Lora Variable",
+        }}
+        className={` bg-[#e5e5e5] flex justify-between items-center p-2 md:p-4 rounded-[3px] border-2 border-b-[#00000056]  ${
+          navRespon ? "bg-black" : "bg-orange-600"
+        }  `}
       >
-        <h2>hello Wordl</h2>
+        <h2 className="text-3xl md:text-4xl">Blog Lil Dre</h2>
+
+        <i
+          onClick={handleClickNav}
+          className="bx bx-menu text-4xl text-[#00000056] md:block cursor-pointer "
+        ></i>
       </nav>
     </>
   );
