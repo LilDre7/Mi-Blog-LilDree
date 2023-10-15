@@ -15,7 +15,7 @@ const Nav = () => {
         style={{
           fontFamily: "Lora Variable",
         }}
-        className={` bg-[#e5e5e5] flex justify-between items-center p-2 md:p-4 rounded-[3px] border-2 border-b-[#00000056]  ${
+        className={` bg-[#e5e5e5] w-full flex justify-between items-center h-16 p-2 border-2 border-b-[#00000056]  ${
           navRespon ? "bg-black" : "bg-orange-600"
         }  `}
       >
