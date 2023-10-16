@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "@fontsource/macondo-swash-caps";
 import "@fontsource-variable/lora";
 
@@ -16,7 +16,7 @@ const Nav = () => {
           fontFamily: "Lora Variable",
         }}
         className={` bg-[#e5e5e5] w-full flex justify-between items-center h-16 p-2 border-2 border-b-[#00000056]  ${
-          navRespon ? "bg-black" : "bg-orange-600"
+          navRespon ? "" : "w-full -inset-16"
         }  `}
       >
         <h2 className="text-3xl md:text-4xl">Blog Lil Dre</h2>
