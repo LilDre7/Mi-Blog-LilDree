@@ -3,14 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav";
 import Header from "../components/Header.astro";
 import Articles from "../components/Articles";
-import Prueba from "../components/Prueba.astro";
 ---
 
 <Layout title="Blog lil dree">
   <main>
     <Nav />
     <Header />
-    <Articles />
-    <Prueba />
+    <Articles client:only />
   </main>
 </Layout>
