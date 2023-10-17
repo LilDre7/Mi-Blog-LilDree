@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav";
 import Header from "../components/Header.astro";
 import Articles from "../components/Articles";
+import Documentacion from "./Documentacion.jsx";
 ---
 
 <Layout title="Blog lil dree">
@@ -10,5 +11,6 @@ import Articles from "../components/Articles";
     <Nav />
     <Header />
     <Articles client:only />
+    <Documentacion />
   </main>
 </Layout>
