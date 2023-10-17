@@ -16,7 +16,6 @@ const Articles = () => {
       .then((response) => {
         response.data.results = response.data.results.slice(0, 10);
         setArticles(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.error("Error al obtener datos de la API:", error);
