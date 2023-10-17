@@ -39,7 +39,7 @@ const Articles = () => {
                 className="flex flex-col items-center justify-center p-4 "
                 index={index}
               >
-                <a article={article} href="/Documentacion/">
+                <a article={article} href="/Ask/">
                   <img
                     className=" w-[300px] h-[220px] rounded-lg"
                     src={article[10]}
