@@ -1,5 +1,22 @@
 ---
-const fechaActual = new Date();
+const MESES = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
+
+const date = new Date();
+
+const fullYear = date.toDateString();
 ---
 
 <!doctype html>
@@ -13,13 +30,26 @@ const fechaActual = new Date();
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="">
     <div class="border-b-2 border-b-black w-[90%]"></div>
-    <h5 class="text-center p-3">{fechaActual}</h5>
-    <ul>
-      <li><i class="bx bxl-whatsapp bx-tada"></i></li>
-      <li><i class="bx bxl-facebook bx-tada"></i></li>
-      <li><i class="bx bxl-twitter bx-tada"></i></li>
+    <div class="w-[50%] flex flex-col justify-center p-3 text-xl">
+      <h3>Lil Dree</h3>
+      <h5 class="">
+        {fullYear}
+      </h5>
+    </div>
+    <ul
+      class="w-[90%] flex justify-around border-2 border-black shadow-2xl p-2"
+    >
+      <li><i class="bx bxl-facebook bx-tada border-2 p-1"></i></li>
+      <li><i class="bx bxl-twitter bx-tada border-2 p-1"></i></li>
+      <li><i class="bx bxl-whatsapp bx-tada border-2 p-1"></i></li>
     </ul>
   </body>
 </html>
+
+<style>
+  li {
+    font-size: 2rem;
+  }
+</style>

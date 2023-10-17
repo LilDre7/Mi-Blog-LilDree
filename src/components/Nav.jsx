@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/macondo-swash-caps";
 import "@fontsource-variable/lora";
+import "./nav.css";
 
 const Nav = () => {
   const [navRespon, setNavRespon] = useState(true);
@@ -16,15 +17,16 @@ const Nav = () => {
           fontFamily: "Lora Variable",
         }}
         className={` bg-[#e5e5e5] w-full flex justify-between items-center h-16 p-2 border-2 border-b-[#00000056]  ${
-          navRespon ? "" : "w-full -inset-16"
+          navRespon ? "" : ""
         }  `}
       >
         <h2 className="text-3xl md:text-4xl">Blog Lil Dre</h2>
-
-        <i
-          onClick={handleClickNav}
-          className="bx bx-menu text-4xl text-[#00000056] md:block cursor-pointer "
-        ></i>
+        <label onClick={handleClickNav} for="burger" class="burger">
+          <input id="burger" type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </nav>
     </>
   );

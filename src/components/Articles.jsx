@@ -23,7 +23,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <h1
         style={{
           fontFamily: "Lora Variable",
@@ -53,7 +53,7 @@ const Articles = () => {
             );
           })
         : "No hay datos disponibles 🦕 "}
-    </>
+    </div>
   );
 };
 
