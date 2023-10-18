@@ -1,4 +1,5 @@
 ---
+import BoxSocialsIcons from "../components/BoxSocialsIcons.astro";
 import Socials from "../components/Socials.astro";
 
 const URL =
@@ -32,10 +33,13 @@ const articles = data.results.slice(0, 1);
                 alt=""
               />
               <h5 class="text-lg pt-4 font-bold">{article[1]} </h5>
-            </div>
-            <div>
-              <h4>Share: </h4>
-              <Socials />
+              <div class="w-full">
+                <h3 class="pb-2 pt-2 font-bold text-lg ">Share:</h3>
+                <BoxSocialsIcons />
+              </div>
+              <p class="w-full pt-3 text-left ">
+                Tags: product design, culture
+              </p>
             </div>
           </>
         );
