@@ -8,28 +8,36 @@ const response = await fetch(URL);
 
 const data = await response.json();
 
-const articles = data.results.slice(0, 10);
+const articles = data.results.slice(0, 1);
 ---
 
 {
   articles.length != 0
     ? articles.map((article: string, index: string) => {
         return (
-          <div class="flex flex-col items-center justify-center p-4 ">
-            <Socials />
-            <p class="font-semibold text-base tracking-wides uppercase pt-2 ">
-              {article[3]}
-            </p>
-            <h4>{article[1]}</h4>
-            <p>{article[6]}</p>
+          <>
+            <div class="flex flex-col items-center justify-center p-4 ">
+              <Socials />
+              <p class="font-semibold text-base tracking-wides uppercase pt-3 ">
+                {article[2]}
+              </p>
+              <h4 class="w-full text-left pt-5 pb-5 text-2xl uppercase">
+                {article[5]}
+              </h4>
+              <p class="pb-4">{article[3]}</p>
 
-            <img
-              class=" w-[300px] h-[220px] rounded-lg"
-              src={article[10]}
-              alt=""
-            />
-            <h5>{article[1]} </h5>
-          </div>
+              <img
+                class=" w-[300px] h-[220px] rounded-lg"
+                src={article[10]}
+                alt=""
+              />
+              <h5 class="text-lg pt-4 font-bold">{article[1]} </h5>
+            </div>
+            <div>
+              <h4>Share: </h4>
+              <Socials />
+            </div>
+          </>
         );
       })
     : "No hay datos disponibles 🦕 "

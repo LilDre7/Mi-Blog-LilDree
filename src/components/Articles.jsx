@@ -16,6 +16,7 @@ const Articles = () => {
       .then((response) => {
         response.data.results = response.data.results.slice(0, 10);
         setArticles(response.data.results);
+        console.log(response.data.results);
       })
       .catch((error) => {
         console.error("Error al obtener datos de la API:", error);
@@ -37,7 +38,7 @@ const Articles = () => {
             return (
               <div
                 className="flex flex-col items-center justify-center p-4 "
-                index={index}
+                key={index}
               >
                 <a article={article} href="/Documentacion/">
                   <img

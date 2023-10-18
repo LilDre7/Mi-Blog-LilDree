@@ -1,22 +1,5 @@
 ---
-const MESES = [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
-];
-
-const date = new Date();
-
-const fullYear = date.toDateString();
+import { fullYear } from "../helpers/fechaActual";
 ---
 
 <!doctype html>
@@ -32,24 +15,11 @@ const fullYear = date.toDateString();
   </head>
   <body class="">
     <div class="border-b-2 border-b-black w-[90%]"></div>
-    <div class="w-[50%] flex flex-col justify-center p-3 text-xl">
-      <h3>Lil Dree</h3>
-      <h5 class="">
+    <div class="w-[80%] flex flex-col justify-center p-3 text-xl">
+      <h3 class="font-bold tracking-widest">Lil Dree</h3>
+      <h3 class="">
         {fullYear}
-      </h5>
+      </h3>
     </div>
-    <ul
-      class="w-[90%] flex justify-around border-2 border-black shadow-2xl p-2"
-    >
-      <li><i class="bx bxl-facebook bx-tada border-2 p-1"></i></li>
-      <li><i class="bx bxl-twitter bx-tada border-2 p-1"></i></li>
-      <li><i class="bx bxl-whatsapp bx-tada border-2 p-1"></i></li>
-    </ul>
   </body>
 </html>
-
-<style>
-  li {
-    font-size: 2rem;
-  }
-</style>
