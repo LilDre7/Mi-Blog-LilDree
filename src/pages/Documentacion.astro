@@ -37,12 +37,35 @@ const articles = data.results.slice(0, 1);
                 <h3 class="pb-2 pt-2 font-bold text-lg ">Share:</h3>
                 <BoxSocialsIcons />
               </div>
-              <p class="w-full pt-3 text-left ">
+              <p class="w-full pt-3 text-left font-bold">
                 Tags: product design, culture
               </p>
+              <div class="linea border-b-2 border-b-black w-[95%] py-2 decoration-dotted " />
+              <p class="description-desing">
+                Mika Matikainen is a Design Founder & Advisor, Berlin School of
+                Creative Leadership Executive MBA participant, Zippie advisor,
+                Wolt
+              </p>
+              <div class="">
+                <div class="linea border-b-2 border-b-black w-full py-2 decoration-dotted " />
+                <img src="/public/images/Group 10.svg" alt="" />
+              </div>
             </div>
           </>
         );
       })
     : "No hay datos disponibles 🦕 "
 }
+
+<style>
+  .linea {
+    text-decoration: dotted;
+  }
+  .description-desing {
+    margin: 6px;
+    padding-top: 10px;
+    text-overflow: clip;
+    text-align: justify;
+    text-shadow: 1px 1px 1px black;
+  }
+</style>
