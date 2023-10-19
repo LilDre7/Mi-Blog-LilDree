@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "@fontsource-variable/lora";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
 
-  const URL =
-    "https://api.nasa.gov/techtransfer/patent/?engine&api_key=F7WtrS9t2B3a2hNWC3NuEGlCVM0goueOjBDt4VYM";
+  const API_URL = import.meta.env.API__URL;
+  const API_KEY = import.meta.env.API__KEY;
 
-  // Solo debe mostrar los 10 primeros
+  const URL = `${API_URL}&api_key=${API_KEY}`;
 
   useEffect(() => {
     axios
@@ -16,7 +16,6 @@ const Articles = () => {
       .then((response) => {
         response.data.results = response.data.results.slice(0, 10);
         setArticles(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.error("Error al obtener datos de la API:", error);
@@ -53,7 +52,7 @@ const Articles = () => {
               </div>
             );
           })
-        : "No hay datos disponibles 🦕 "}
+        : "No hay datos disponibles 🦕"}
     </div>
   );
 };
