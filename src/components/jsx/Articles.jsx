@@ -14,7 +14,7 @@ const Articles = () => {
     axios
       .get(URL)
       .then((response) => {
-        response.data.results = response.data.results.slice(0, 1);
+        response.data.results = response.data.results.slice(0, 8);
         setArticles(response.data.results);
       })
       .catch((error) => {

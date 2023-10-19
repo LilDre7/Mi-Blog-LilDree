@@ -12,10 +12,12 @@ const response = await fetch(URL);
 
 const data = await response.json();
 
-const articles = data.results.slice(0, 3);
+const articles = data.results.slice(0, 1);
+import Header from "../components/astro/Header.astro";
 ---
 
 <Layout title="Your Article">
+  <Header />
   {
     articles.length != 0
       ? articles.map((article: string, index: string) => {
@@ -59,20 +61,22 @@ const articles = data.results.slice(0, 3);
                   alt=""
                 />
               </div>
-              <h2
-                style={{
-                  fontFamily: "Lora Variable",
-                }}
-                class="text-center p-2 font-semibold text-3xl"
-              >
-                What to read next
-              </h2>
-              <Articles client:only />
             </>
           );
         })
       : "No hay datos disponibles 🦕 "
   }
+  <div>
+    <h2
+      style={{
+        fontFamily: "Lora Variable",
+      }}
+      class="text-center p-2 font-semibold text-3xl"
+    >
+      What to read next
+    </h2>
+    <Articles client:only />
+  </div>
 </Layout>
 
 <style>
