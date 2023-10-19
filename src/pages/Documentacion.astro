@@ -1,4 +1,5 @@
 ---
+import Articles from "../components/Articles";
 import BoxSocialsIcons from "../components/BoxSocialsIcons.astro";
 import Socials from "../components/Socials.astro";
 
@@ -17,7 +18,7 @@ const articles = data.results.slice(0, 1);
     ? articles.map((article: string, index: string) => {
         return (
           <>
-            <div class="flex flex-col items-center justify-center p-4 ">
+            <div class="flex flex-col items-center justify-center p-4">
               <Socials />
               <p class="font-semibold text-base tracking-wides uppercase pt-3 ">
                 {article[2]}
@@ -46,11 +47,26 @@ const articles = data.results.slice(0, 1);
                 Creative Leadership Executive MBA participant, Zippie advisor,
                 Wolt
               </p>
-              <div class="">
-                <div class="linea border-b-2 border-b-black w-full py-2 decoration-dotted " />
-                <img src="/public/images/Group 10.svg" alt="" />
-              </div>
             </div>
+            <div class="linea border-b-2 border-b-black w-full py-2 decoration-dotted " />
+            <div class="w-full flex items-center text-center justify-center">
+              <img
+                class="-translate-y-7"
+                src="/public/images/Group 10.svg"
+                alt=""
+              />
+            </div>
+            <h2>What to read next</h2>
+            <a href="/Documentacion/">
+              <img
+                class=" w-[300px] h-[220px] rounded-lg"
+                src={article[10]}
+                alt=""
+              />
+            </a>
+            <h1 class="font-semibold text-base tracking-wides uppercase pt-2 ">
+              {article[5]}
+            </h1>
           </>
         );
       })
