@@ -2,6 +2,7 @@
 import Articles from "../components/Articles";
 import BoxSocialsIcons from "../components/BoxSocialsIcons.astro";
 import Socials from "../components/Socials.astro";
+import Layout from "../layouts/Layout.astro";
 
 const URL =
   "https://api.nasa.gov/techtransfer/patent/?engine&api_key=F7WtrS9t2B3a2hNWC3NuEGlCVM0goueOjBDt4VYM";
@@ -13,65 +14,67 @@ const data = await response.json();
 const articles = data.results.slice(0, 1);
 ---
 
-{
-  articles.length != 0
-    ? articles.map((article: string, index: string) => {
-        return (
-          <>
-            <div class="flex flex-col items-center justify-center p-4">
-              <Socials />
-              <p class="font-semibold text-base tracking-wides uppercase pt-3 ">
-                {article[2]}
-              </p>
-              <h4 class="w-full text-left pt-5 pb-5 text-2xl uppercase">
-                {article[5]}
-              </h4>
-              <p class="pb-4">{article[3]}</p>
+<Layout title="Your Article">
+  {
+    articles.length != 0
+      ? articles.map((article: string, index: string) => {
+          return (
+            <>
+              <div class="flex flex-col items-center justify-center p-4">
+                <Socials />
+                <p class="font-semibold text-base tracking-wides uppercase pt-3 ">
+                  {article[2]}
+                </p>
+                <h4 class="w-full text-left pt-5 pb-5 text-2xl uppercase">
+                  {article[5]}
+                </h4>
+                <p class="pb-4">{article[3]}</p>
 
-              <img
-                class=" w-[300px] h-[220px] rounded-lg"
-                src={article[10]}
-                alt=""
-              />
-              <h5 class="text-lg pt-4 font-bold">{article[1]} </h5>
-              <div class="w-full">
-                <h3 class="pb-2 pt-2 font-bold text-lg ">Share:</h3>
-                <BoxSocialsIcons />
+                <img
+                  class=" w-[300px] h-[220px] rounded-lg"
+                  src={article[10]}
+                  alt=""
+                />
+                <h5 class="text-lg pt-4 font-bold">{article[1]} </h5>
+                <div class="w-full">
+                  <h3 class="pb-2 pt-2 font-bold text-lg ">Share:</h3>
+                  <BoxSocialsIcons />
+                </div>
+                <p class="w-full pt-3 text-left font-bold">
+                  Tags: product design, culture
+                </p>
+                <div class="linea border-b-2 border-b-black w-[95%] py-2 decoration-dotted " />
+                <p class="description-desing">
+                  Mika Matikainen is a Design Founder & Advisor, Berlin School
+                  of Creative Leadership Executive MBA participant, Zippie
+                  advisor, Wolt
+                </p>
               </div>
-              <p class="w-full pt-3 text-left font-bold">
-                Tags: product design, culture
-              </p>
-              <div class="linea border-b-2 border-b-black w-[95%] py-2 decoration-dotted " />
-              <p class="description-desing">
-                Mika Matikainen is a Design Founder & Advisor, Berlin School of
-                Creative Leadership Executive MBA participant, Zippie advisor,
-                Wolt
-              </p>
-            </div>
-            <div class="linea border-b-2 border-b-black w-full py-2 decoration-dotted " />
-            <div class="w-full flex items-center text-center justify-center">
-              <img
-                class="-translate-y-7"
-                src="/public/images/Group 10.svg"
-                alt=""
-              />
-            </div>
-            <h2>What to read next</h2>
-            <a href="/Documentacion/">
-              <img
-                class=" w-[300px] h-[220px] rounded-lg"
-                src={article[10]}
-                alt=""
-              />
-            </a>
-            <h1 class="font-semibold text-base tracking-wides uppercase pt-2 ">
-              {article[5]}
-            </h1>
-          </>
-        );
-      })
-    : "No hay datos disponibles 🦕 "
-}
+              <div class="linea border-b-2 border-b-black w-full py-2 decoration-dotted " />
+              <div class="w-full flex items-center text-center justify-center">
+                <img
+                  class="-translate-y-7"
+                  src="/public/images/Group 10.svg"
+                  alt=""
+                />
+              </div>
+              <h2>What to read next</h2>
+              <a href="/Documentacion/">
+                <img
+                  class=" w-[300px] h-[220px] rounded-lg"
+                  src={article[10]}
+                  alt=""
+                />
+              </a>
+              <h1 class="font-semibold text-base tracking-wides uppercase pt-2 ">
+                {article[5]}
+              </h1>
+            </>
+          );
+        })
+      : "No hay datos disponibles 🦕 "
+  }
+</Layout>
 
 <style>
   .linea {

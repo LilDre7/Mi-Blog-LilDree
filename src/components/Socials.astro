@@ -1,27 +1,16 @@
 ---
 import { fullYear } from "../utils/fechaActual";
 import BoxSocialsIcon from "../components/BoxSocialsIcons.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Socials Personal</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="">
-    <div class="border-b-2 border-b-black w-[90%]"></div>
-    <div class="w-[80%] flex flex-col justify-center p-3 text-xl">
-      <h3 class="font-bold tracking-widest">Lil Dree</h3>
-      <h3 class="">
-        {fullYear}
-      </h3>
-    </div>
-    <BoxSocialsIcon />
-  </body>
-</html>
+<Layout>
+  <div class="border-b-2 border-b-black w-[90%]"></div>
+  <div class="w-[80%] flex flex-col justify-center p-3 text-xl">
+    <h3 class="font-bold tracking-widest">Lil Dree</h3>
+    <h3 class="">
+      {fullYear}
+    </h3>
+  </div>
+  <BoxSocialsIcon />
+</Layout>
