@@ -1,7 +1,7 @@
 ---
-import Articles from "../components/Articles";
-import BoxSocialsIcons from "../components/BoxSocialsIcons.astro";
-import Socials from "../components/Socials.astro";
+import Articles from "../components/jsx/Articles";
+import BoxSocialsIcons from "../components/astro/BoxSocialsIcons.astro";
+import Socials from "../components/astro/Socials.astro";
 import Layout from "../layouts/Layout.astro";
 
 const URL =
@@ -59,21 +59,12 @@ const articles = data.results.slice(0, 1);
                 />
               </div>
               <h2>What to read next</h2>
-              <a href="/Documentacion/">
-                <img
-                  class=" w-[300px] h-[220px] rounded-lg"
-                  src={article[10]}
-                  alt=""
-                />
-              </a>
-              <h1 class="font-semibold text-base tracking-wides uppercase pt-2 ">
-                {article[5]}
-              </h1>
             </>
           );
         })
       : "No hay datos disponibles 🦕 "
   }
+  <Articles />
 </Layout>
 
 <style>

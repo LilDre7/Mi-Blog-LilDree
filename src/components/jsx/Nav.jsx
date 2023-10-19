@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/macondo-swash-caps";
 import "@fontsource-variable/lora";
-import "./nav.css";
+import "../css/nav.css";
 
 const Nav = () => {
   const [navRespon, setNavRespon] = useState(true);
