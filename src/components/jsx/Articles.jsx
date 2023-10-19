@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "@fontsource-variable/lora";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
 
-  const API_URL = import.meta.env.API__URL;
+  const API_URL = "https://api.nasa.gov/techtransfer/patent/?engine";
 
-  console.log(API_URL);
-  const API_KEY = import.meta.env.API__KEY;
-  console.log(API_KEY);
+  const API_KEY = "F7WtrS9t2B3a2hNWC3NuEGlCVM0goueOjBDt4VYM";
 
   const URL = `${API_URL}&api_key=${API_KEY}`;
-  console.log(URL);
 
   useEffect(() => {
     axios
       .get(URL)
       .then((response) => {
-        response.data.results = response.data.results.slice(0, 10);
+        response.data.results = response.data.results.slice(0, 1);
         setArticles(response.data.results);
       })
       .catch((error) => {
@@ -28,14 +24,6 @@ const Articles = () => {
 
   return (
     <div>
-      <h1
-        style={{
-          fontFamily: "Lora Variable",
-        }}
-        className="text-center p-2 font-semibold text-3xl"
-      >
-        All Articles
-      </h1>
       {articles.length != 0
         ? articles.map((article, index) => {
             return (

@@ -3,6 +3,7 @@ import Articles from "../components/jsx/Articles";
 import BoxSocialsIcons from "../components/astro/BoxSocialsIcons.astro";
 import Socials from "../components/astro/Socials.astro";
 import Layout from "../layouts/Layout.astro";
+import "@fontsource-variable/lora";
 
 const URL =
   "https://api.nasa.gov/techtransfer/patent/?engine&api_key=F7WtrS9t2B3a2hNWC3NuEGlCVM0goueOjBDt4VYM";
@@ -11,7 +12,7 @@ const response = await fetch(URL);
 
 const data = await response.json();
 
-const articles = data.results.slice(0, 1);
+const articles = data.results.slice(0, 3);
 ---
 
 <Layout title="Your Article">
@@ -58,13 +59,20 @@ const articles = data.results.slice(0, 1);
                   alt=""
                 />
               </div>
-              <h2>What to read next</h2>
+              <h2
+                style={{
+                  fontFamily: "Lora Variable",
+                }}
+                class="text-center p-2 font-semibold text-3xl"
+              >
+                What to read next
+              </h2>
+              <Articles client:only />
             </>
           );
         })
       : "No hay datos disponibles 🦕 "
   }
-  <Articles />
 </Layout>
 
 <style>
@@ -79,4 +87,3 @@ const articles = data.results.slice(0, 1);
     text-shadow: 1px 1px 1px black;
   }
 </style>
-../components/Articles../components/jsx/Articles

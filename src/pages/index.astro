@@ -4,15 +4,22 @@ import Nav from "../components/jsx/Nav";
 import Header from "../components/astro/Header.astro";
 import Articles from "../components/jsx/Articles";
 import Documentacion from "./Documentacion.astro";
+import "@fontsource-variable/lora";
 ---
 
 <Layout title="Blog lil dree">
   <main>
     <Nav />
     <Header />
+    <h1
+      style={{
+        fontFamily: "Lora Variable",
+      }}
+      class="text-center p-2 font-semibold text-3xl"
+    >
+      All Articles
+    </h1>
     <Articles client:only />
     <Documentacion client:only />
   </main>
 </Layout>
- ../components/jsx/Articles
-../components/Articles../components/jsx/Articles
