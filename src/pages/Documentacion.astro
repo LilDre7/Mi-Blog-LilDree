@@ -14,9 +14,11 @@ const data = await response.json();
 
 const articles = data.results.slice(0, 1);
 import Header from "../components/astro/Header.astro";
+import Nav from "../components/jsx/Nav";
 ---
 
 <Layout title="Your Article">
+  <Nav />
   <Header />
   {
     articles.length != 0
