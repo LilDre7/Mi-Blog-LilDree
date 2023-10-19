@@ -6,9 +6,13 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   const API_URL = import.meta.env.API__URL;
+
+  console.log(API_URL);
   const API_KEY = import.meta.env.API__KEY;
+  console.log(API_KEY);
 
   const URL = `${API_URL}&api_key=${API_KEY}`;
+  console.log(URL);
 
   useEffect(() => {
     axios
