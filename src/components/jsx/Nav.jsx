@@ -8,32 +8,32 @@ const Nav = () => {
 
   const handleClickNav = () => {
     setNavRespon(!navRespon);
+    console.log(navRespon);
   };
 
   return (
-    // <h2 className="text-3xl md:text-4xl">Blog Lil Dre</h2>
-    <nav
+    <header
       style={{
         fontFamily: "Lora Variable",
       }}
-      className={` text-white absolute top-full ${
-        navRespon ? "left-0 z-50 min-h-screen dark:text-white" : "-left-full"
-      } duration-300 flex flex-col gap-5 font-[600] bg-[#f5f0e8] min-h-screen w-full justify-center items-center text-3xl md:static md:flex md:flex-row md:gap-10 md:w-auto md:min-h-0 md:bg-transparent md:text-base md:items-center md:text-white md:p-0`}
+      className={"w-full fixed top-0 left-0 z-50 h-[50px] bg-white shadow-lg"}
     >
-      <label onClick={handleClickNav} htmlFor="burger" className="burger">
-        <input id="burger" type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      <ul className="flex flex-col md:flex-row justify-around items-center md:space-x-4">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Blog</li>
-      </ul>
-    </nav>
+      <h1>Blog Lil Dree</h1>
+      <button className="bg-red-500" onClick={handleClickNav}>
+        click modal
+      </button>
+      <nav
+        className={`absolute top-full ${
+          navRespon ? "left-0 z-50 min-h-screen " : "-left-full"
+        } duration-300 flex flex-col gap-5 font-[600] bg-[#f5f0e8] min-h-screen w-full justify-center items-center text-3xl md:static md:flex md:flex-row md:gap-10 md:w-auto md:min-h-0 md:bg-transparent md:text-base md:items-center md:text-white md:p-0`}
+      >
+        <ul>
+          <li>Home</li>
+          <li>Blog</li>
+          <li>Contactme</li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
