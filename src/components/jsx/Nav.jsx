@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "@fontsource/macondo-swash-caps";
 import "@fontsource-variable/lora";
-import "../css/nav.css";
 
 const Nav = () => {
   const [navRespon, setNavRespon] = useState(false);
@@ -18,10 +17,13 @@ const Nav = () => {
       }}
       className={"w-full fixed top-0 left-0 z-50 h-[50px] bg-white shadow-lg"}
     >
-      <h1>Blog Lil Dree</h1>
-      <button className="bg-red-500" onClick={handleClickNav}>
-        click modal
-      </button>
+      <div className="flex justify-between items-center h-full px-5 md:px-10">
+        <h1 className="text-2xl">Blog Lil Dree</h1>
+        <i
+          onClick={handleClickNav}
+          class="bx bx-menu-alt-right bx-fade-left text-3xl cursor-pointer"
+        ></i>
+      </div>
       <nav
         className={`absolute top-full ${
           navRespon ? "left-0 z-50 min-h-screen " : "-left-full"

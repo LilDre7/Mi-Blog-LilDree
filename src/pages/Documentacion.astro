@@ -15,10 +15,11 @@ const data = await response.json();
 const articles = data.results.slice(0, 1);
 import Header from "../components/astro/Header.astro";
 import Nav from "../components/jsx/Nav";
+import SignUp from "../components/astro/SignUp.astro";
 ---
 
 <Layout title="Your Article">
-  <Nav />
+  <Nav client:only />
   <Header />
   {
     articles.length != 0
@@ -48,7 +49,7 @@ import Nav from "../components/jsx/Nav";
                 <p class="w-full pt-3 text-left font-bold">
                   Tags: product design, culture
                 </p>
-                <div class="linea border-b-2 border-b-black w-[95%] py-2 decoration-dotted " />
+                <div class="linea border-b-2 border-b-black w-[99%] py-2 decoration-dotted " />
                 <p class="description-desing">
                   Mika Matikainen is a Design Founder & Advisor, Berlin School
                   of Creative Leadership Executive MBA participant, Zippie
@@ -80,6 +81,8 @@ import Nav from "../components/jsx/Nav";
     <Articles client:only />
   </div>
 </Layout>
+
+<SignUp />
 
 <style>
   .linea {
