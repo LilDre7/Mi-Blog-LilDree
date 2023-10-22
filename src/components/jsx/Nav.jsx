@@ -18,7 +18,9 @@ const Nav = () => {
       className={"w-full fixed top-0 left-0 z-50 h-[50px] bg-white shadow-lg"}
     >
       <div className="flex justify-between items-center h-full px-5 md:px-10">
-        <h1 className="text-2xl">Blog Lil Dree</h1>
+        <h1 hr className="text-2xl">
+          <a href="">Blog Lil Dree</a>
+        </h1>
         <i
           onClick={handleClickNav}
           class="bx bx-menu-alt-right bx-fade-left text-3xl cursor-pointer"
