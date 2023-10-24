@@ -10,10 +10,20 @@ import Layout from "../../layouts/Layout.astro";
       Sign up for the newsletter
     </h3>
 
-    <p class="text-center translate-y-3 p-4">
+    <p class="text-center -translate-y-3 p-4">
       If you want relevant updates occasionally, sign up for the private
       newsletter. Your email is never shared.
     </p>
+
+    <div class="flex items-center justify-center m-2">
+      <input
+        class="text-black border-2 border-black p-4"
+        placeholder="Enter your email"
+        type="text"
+      />
+      <button class="bg-black text-white p-4" type="submit">SIGN UP</button>
+    </div>
+
     <div class="border-b-4 border-b-black w-full"></div>
   </div>
 </Layout>
