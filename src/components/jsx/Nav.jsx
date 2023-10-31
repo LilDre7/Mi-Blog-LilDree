@@ -23,7 +23,7 @@ const Nav = () => {
         </h1>
         <i
           onClick={handleClickNav}
-          class="bx bx-menu-alt-right bx-fade-left text-3xl cursor-pointer"
+          className="bx bx-menu-alt-right bx-fade-left text-3xl cursor-pointer"
         ></i>
       </div>
       <nav
