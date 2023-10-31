@@ -7,7 +7,6 @@ const Nav = () => {
 
   const handleClickNav = () => {
     setNavRespon(!navRespon);
-    console.log(navRespon);
   };
 
   return (
@@ -19,7 +18,7 @@ const Nav = () => {
     >
       <div className="flex justify-between items-center h-full px-5 md:px-10">
         <h1 className="text-2xl">
-          <a href="/index/">Blog Lil Dree</a>
+          <a href="">Blog Lil Dree</a>
         </h1>
         <i
           onClick={handleClickNav}
