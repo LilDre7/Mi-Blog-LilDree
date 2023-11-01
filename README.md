@@ -22,6 +22,11 @@ Proyect create in 5 days
 
 Inside of your Astro project, you'll see the following folders and files:
 
+| ├── utils/
+│ ├── layouts/
+│  
+│
+
 ```text
 /
 ├── public/
@@ -31,7 +36,9 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── components/
 │   │   └── astro
 |   |   └── jsx
-|   ├── helpers
+│   ├── helpers/
+    ├── pages/
+|   ├── utils/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
