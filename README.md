@@ -1,5 +1,9 @@
 # Astro Starter Kit: Basics
 
+# Create proyect by :
+
+> **Lil Dree** 🧑🏾‍🚀
+
 ```sh
 npm create astro@latest -- --template basics
 ```
