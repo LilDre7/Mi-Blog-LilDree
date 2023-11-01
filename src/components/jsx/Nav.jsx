@@ -28,7 +28,7 @@ const Nav = () => {
       <nav
         className={`absolute top-full ${
           navRespon ? "left-0 z-50 min-h-screen " : "-left-full"
-        } duration-300 flex flex-col gap-5 font-[600] bg-[#f5f0e8] min-h-screen w-full justify-center items-center text-3xl md:static md:flex md:flex-row md:gap-10 md:w-auto md:min-h-0 md:bg-transparent md:text-base md:items-center md:text-white md:p-0`}
+        } duration-300 flex flex-col gap-5 font-[600] bg-[#f5f0e8] min-h-screen w-full justify-center items-center text-3xl `}
       >
         <ul>
           <li>Home</li>
