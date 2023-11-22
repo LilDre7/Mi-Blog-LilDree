@@ -65,4 +65,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## 🐋 Commands FOR Docker
 
-- npm run start
+```sh
+npm run start --templete
+```
