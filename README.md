@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Blog Alvaro Aburto 🤴🏾
 
 # Create proyect by :
 
