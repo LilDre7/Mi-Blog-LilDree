@@ -1,9 +1,25 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from '../../layouts/Layout.astro'
+
+const contactme = ['Email me', 'Connect with me', 'Resume']
 ---
 
 <Layout>
-  <section class="w-[342px] bg-red-500 " >
-
+  <section class="w-[342px] bg-red-500">
+    <div>
+      <h1>Alvaro Aburto Ocampo</h1>
+      <h6>Desarrollador web & movil full-stack</h6>
+    </div>
+    <div>
+      <p>
+        Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
+        writing, working- out, and teaching. In addition to coding, I also make
+        YouTube videos, where I teach mathematics, creative videos on code, and
+        personal development.
+      </p>
+    </div>
+    <div>
+      {contactme.map((contact) => <h4>{contact}</h4>)}
+    </div>
   </section>
 </Layout>
