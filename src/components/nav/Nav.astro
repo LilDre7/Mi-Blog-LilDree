@@ -1,20 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro"
-
-const imageStyle = "w-12 h-12"
-
+import Layout from '../../layouts/Layout.astro'
 ---
 
-
 <Layout>
-  <nav>
+  <nav
+    class="overflow-hidden w-[390px] h-[60px] flex justify-between items-center"
+  >
     <div>
-      <img class="" src="/images/logoPersonalWhite.png" alt="logoPersonal">
+      <img
+        class="w-12 h-12"
+        src="/images/logoPersonalWhite.png"
+        alt="logoPersonal"
+      />
     </div>
-    <div>
-      <h1>
-        menu
-      </h1>
+    <div class="flex gap-7 items-center">
+      <div class="flex items-center" >
+      <span>menu</span>
+        <img src="/images/pngIcons/iconPlus.png" alt="" />
+      </div>
+      <div>
+        <img src="/images/pngIcons/moodIcon.png" alt="" />
+      </div>
     </div>
   </nav>
 </Layout>
