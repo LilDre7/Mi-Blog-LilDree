@@ -1,9 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import '../header/header.css'
-import BlogHeader from "../blog/BlogHeader.astro"
-
-const contactme = ['Email me', 'Connect with me', 'Resume']
+import Layout from '../../layouts/Layout.astro';
+import '../header/header.css';
+import BlogHeader from '../blog/BlogHeader.astro';
+import contactme from '../../utils/contact';
 ---
 
 <Layout>
@@ -29,9 +28,7 @@ const contactme = ['Email me', 'Connect with me', 'Resume']
         contactme.map((contact) => (
           <section class="flex items-center gap-2 font-normal text-lg">
             <img src="/images/svgIcons/arrow.svg" alt="" />
-            <h4 class="gap-4 py-[3px] text-[#A1A09A] font-medium">
-              {contact}
-            </h4>
+            <h4 class="gap-4 py-[3px] text-[#A1A09A] font-medium">{contact}</h4>
           </section>
         ))
       }
