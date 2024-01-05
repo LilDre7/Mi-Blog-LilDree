@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Blog Alvaro Aburto 🤴🏾
 
 # Create proyect by :
 
@@ -64,3 +64,7 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 ## 🐋 Commands FOR Docker
+
+```sh
+npm run start --templete
+```
