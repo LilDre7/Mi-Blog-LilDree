@@ -3,42 +3,42 @@ import "../nav/NavResponsive.css"
 const NavResponsive = () => {
   return (
     <div>
-      <div class="theme-popup">
-        <input type="radio" name="theme" id="default" checked="" />
+      <div className="theme-popup">
+        <input type="radio" name="theme" id="default" />
         <input type="radio" name="theme" id="light" />
         <input type="radio" name="theme" id="dark" />
         <input type="checkbox" id="checkbox" />
         <div className='flex items-center gap-1' >
-          <label for="checkbox" class="theme-popup__button">
+          <label htmlFor="checkbox" className="theme-popup__button">
             Menu
             <img src="/images/pngIcons/iconPlus.png" alt="" />
           </label>
         </div>
-        <div class="theme-popup__list-container">
-          <ul class="theme-popup__list">
+        <div className="theme-popup__list-container">
+          <ul className="theme-popup__list">
             <li>
-              <label for="default">
+              <label htmlFor="default">
                 <span>
                   Home
                 </span>
               </label>
             </li>
             <li>
-              <label for="default">
+              <label htmlFor="default">
                 <a href="/About/" >
                   About
                 </a>
               </label>
             </li>
             <li>
-              <label for="dark">
+              <label htmlFor="dark">
                 <span>
                   Blog
                 </span>
               </label>
             </li>
             <li>
-              <label for="dark">
+              <label htmlFor="dark">
                 <span>
                   Gear
                 </span>

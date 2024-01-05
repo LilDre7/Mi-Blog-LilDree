@@ -7,12 +7,12 @@
   --total_text_color: #e0e0e0;
   --total_font_family: Menlo, Roboto Mono, monospace;
   /* button */
-  --btn_bg: #3A3A3A;
+  --btn_bg: #3a3a3a;
   --btn_padding: 0.5em;
   --btn_height: 2em;
-  --btn_border_radius: 0.4500em;
+  --btn_border_radius: 0.45em;
   --btn_outline_width: 0.0625em;
-  --btn_outline_color: #A0A0A0;
+  --btn_outline_color: #a0a0a0;
   --btn_outline_offset: 0.0625em;
   --btn_gap: 0.3125em;
   /* list */
@@ -20,7 +20,7 @@
   --list_bg: var(--btn_bg);
   --list_border_radius: var(--btn_border_radius);
   --list_gap: 0.1em;
-  --list_btn_hover_bg: #5A5656;
+  --list_btn_hover_bg: #5a5656;
   --list_btn_active: #b9b9b970;
   --list_btn_border_radius: 2em;
   --list_btn_padding: 0.65em 1.3em;
@@ -75,7 +75,7 @@
   column-gap: var(--btn_gap);
   border-radius: var(--btn_border_radius);
   border: none;
-  color: #A1A09A;
+  color: #a1a09a;
   font-family: inherit;
   outline: none;
   font-weight: bold;
@@ -97,7 +97,7 @@
 .theme-popup__list label {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   column-gap: var(--list_btn_gap);
   padding: var(--list_btn_padding);
   border-radius: var(--list_btn_border_radius);
@@ -110,33 +110,33 @@
 
 /* actions */
 
-#checkbox:checked~.theme-popup__button {
+#checkbox:checked ~ .theme-popup__button {
   outline: var(--btn_outline_width) solid var(--btn_outline_color);
   outline-offset: var(--btn_outline_offset);
 }
 
-#checkbox:checked~.theme-popup__list-container {
+#checkbox:checked ~ .theme-popup__list-container {
   display: block;
 }
 
 .theme-popup__list label:hover,
 .theme-popup__button:hover,
-#checkbox:checked~.theme-popup__button {
-  color: #A0A0A0;
+#checkbox:checked ~ .theme-popup__button {
+  color: #a0a0a0;
 }
 
-#checkbox:checked~.theme-popup__list {
-  color: #A0A0A0;
+#checkbox:checked ~ .theme-popup__list {
+  color: #a0a0a0;
 }
 
-#default:checked~.theme-popup__list-container label[for="default"],
-#light:checked~.theme-popup__list-container label[for="light"],
-#dark:checked~.theme-popup__list-container label[for="dark"] {
+#default:checked ~ .theme-popup__list-container label[for='default'],
+#light:checked ~ .theme-popup__list-container label[for='light'],
+#dark:checked ~ .theme-popup__list-container label[for='dark'] {
   color: #ffffff;
 }
 
-#default:checked~label svg.default,
-#light:checked~label svg.sun,
-#dark:checked~label svg.moon {
+#default:checked ~ label svg.default,
+#light:checked ~ label svg.sun,
+#dark:checked ~ label svg.moon {
   display: block;
 }

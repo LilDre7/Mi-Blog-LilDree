@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
 import NavResponsive from './NavResponsive'
 
 const Nav = () => {
   return (
     <nav
-    className="w-[390px] h-[60px] flex justify-between items-center"
+    className="w-[390px] h-[60px] flex justify-between items-center mx-auto"
   >
     <div className="translate-x-5 pt-1">
       <img
