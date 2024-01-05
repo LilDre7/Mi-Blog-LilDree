@@ -2,11 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import "@fontsource-variable/lora";
 
-import Nav from "../components/nav/Nav.astro"
+import Nav from "../components/nav/Nav.jsx"
+import Header from "../components/header/Header.astro"
 ---
 
 <Layout title="Alvaro Aburto - DEV WEB & MOVIL">
   <main>
-    <Nav/>
+    <Nav client:only />
+    <Header />
   </main>
 </Layout>

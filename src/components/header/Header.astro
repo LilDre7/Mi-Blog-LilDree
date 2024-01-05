@@ -1,25 +1,39 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import '../header/header.css'
 
 const contactme = ['Email me', 'Connect with me', 'Resume']
 ---
 
 <Layout>
-  <section class="w-[342px] bg-red-500">
+  <section class="w-[342px] mx-auto mt-[45px]">
     <div>
-      <h1>Alvaro Aburto Ocampo</h1>
-      <h6>Desarrollador web & movil full-stack</h6>
+      <h1
+        class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold"
+      >
+        Alvaro Aburto Ocampo
+      </h1>
+      <h6 class="text-[#A1A09A]">Desarrollador web & movil full-stack</h6>
     </div>
-    <div>
-      <p>
+    <div class="mt-[54px]">
+      <p class="font-normal">
         Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
         writing, working- out, and teaching. In addition to coding, I also make
         YouTube videos, where I teach mathematics, creative videos on code, and
         personal development.
       </p>
     </div>
-    <div>
-      {contactme.map((contact) => <h4>{contact}</h4>)}
+    <div class="mt-[34px]">
+      {
+        contactme.map((contact) => (
+          <section class="flex items-center gap-2 font-normal text-lg">
+            <img src="/images/svgIcons/arrow.svg" alt="" />
+            <h4 class="gap-4 py-[3px] text-[#A1A09A] font-semibold ">
+              {contact}
+            </h4>
+          </section>
+        ))
+      }
     </div>
   </section>
 </Layout>

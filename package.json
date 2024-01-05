@@ -11,13 +11,13 @@
     "format": "prettier --write 'src/**/*.{astro,css,js,json}'"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.3",
+    "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource-variable/lora": "^5.0.9",
     "@fontsource/macondo-swash-caps": "^5.0.15",
     "@fontsource/merriweather": "^5.0.8",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
     "astro": "^3.3.0",
     "axios": "^1.5.1",
     "boxicons": "^2.1.4",
