@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import NavResponsive from './utils/NavResponsive';
 import Moon from './icons/Moon';
 import Sun from './icons/Sun';
-
+import "./css/NavResponsive.css"
 
 const Nav = () => {
   const [isTheme, setIsTheme] = useState('ligth');
@@ -20,25 +20,27 @@ const Nav = () => {
   };
 
   return (
-    <nav className="w-[390px] h-[60px] flex justify-between items-center mx-auto dark:bg-black ">
-      <div className="translate-x-5 pt-1">
-        <img
-          className="w-10 h-10 rounded-md"
-          src="/images/logoPersonalWhite.png"
-          alt="logoPersonal"
-        />
-      </div>
-      <div className="flex gap-3 items-center">
-        <NavResponsive />
-        <button className="container" onClick={handleTheme}>
-          <label className="toggle" htmlFor="switch">
-            <input id="switch" className="input" type="checkbox" />
+    <section className="dark:bg-white mt-2 mx-auto w-[342px] ">
+      <nav className="flex justify-between items-center pt-2 ">
+        <div className="">
+          <img
+            className="w-10 h-10 rounded-md"
+            src="/images/logoPersonalWhite.png"
+            alt="logoPersonal"
+          />
+        </div>
+        <div className="flex gap-3 items-center">
+          <NavResponsive />
+          <button className="container" onClick={handleTheme}>
+            {/* <label onClick={handleTheme} className="toggle" htmlFor="switch"> */}
+            {/* <input onClick={handleTheme} id="switch" className="input" type="checkbox" /> */}
             <Moon />
             <Sun />
-          </label>
-        </button>
-      </div>
-    </nav>
+            {/* </label> */}
+          </button>
+        </div>
+      </nav>
+    </section>
   );
 };
 

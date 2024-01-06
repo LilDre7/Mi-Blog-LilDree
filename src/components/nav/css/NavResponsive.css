@@ -144,20 +144,22 @@
 
 /* -- BUTTON DARK MOOD -- */
 
+.container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 40px;
+} 
+
 .toggle {
-  background-color: #fff;
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   cursor: pointer;
   box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
   line-height: 1;
-}
-
-.input {
-  display: none;
 }
 
 .icon {
