@@ -1,11 +1,28 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import articulos from '../../utils/articles.js'
+import Layout from '../../layouts/Layout.astro';
+import articulos from '../../utils/articles.js';
 ---
 
 <Layout>
-  <section class="mt-[54px]">
+  <section class="mt-[54px] dark:bg-black ">
     <h4 class="font-semibold text-lg">Latest Blogs</h4>
-    {articulos.map((article) => <div></div>)}
+    {
+      articulos.map((article) => (
+        <div class="mt-[40px] flex justify-between items-center gap-6" >
+          <div class="" >
+            <h6 class="text-[#A1A09A] font-medium">{article.fechaCreacion}</h6>
+            <h3 class="text-[#EDEDEC] font-semibold">{article.titulo}</h3>
+          </div>
+          <div class="w-[96px] h-[96px] relative aspect-square" >
+            <img class="absolute w-full h-full object-cover rounded-xl " src={article.imagenURL} alt="imageArticle" />
+          </div>
+        </div>
+      ))
+    }
+    <p class="text-[#EDEDEC] font-medium text-lg w-16 py-12">
+      <a class="border-solid border-white border-b-2" href="#">
+        See All
+      </a>
+    </p>
   </section>
 </Layout>

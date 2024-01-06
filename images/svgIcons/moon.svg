@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512" id="moon">
+  <g>
+    <path fill="#6A6D68" d="M412.95,381.15..."></path>
+    <path fill="#A3AAA0" d="M408.95,377.15..."></path>
+    <circle cx="285" cy="156" r="44.5" fill="#666865" stroke="#5E5E5D" stroke-miterlimit="10" stroke-width="4"></circle>
+    {/* Otras formas de círculo... */}
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-import "../nav/NavResponsive.css"
+import "../css/NavResponsive.css"
 
 const NavResponsive = () => {
   return (

@@ -20,7 +20,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="dark:bg-black max-h-screen h-screen">
     <slot />
   </body>
 </html>
@@ -39,8 +39,8 @@ const { title } = Astro.props;
   html {
     font-family: system-ui, sans-serif;
     background-size: 224px;
-    background: #101010;
     color: aliceblue;
+    background-color: rgb(255, 255, 255);
   }
   code {
     font-family:
