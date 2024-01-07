@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import NavResponsive from './utils/NavResponsive';
 import Moon from './icons/Moon';
 import Sun from './icons/Sun';
-import "./css/NavResponsive.css"
+import "./css/navStyle.css"
 
 const Nav = () => {
   const [isTheme, setIsTheme] = useState('ligth');
@@ -20,7 +20,7 @@ const Nav = () => {
   };
 
   return (
-    <section className="mx-auto w-[342px] ">
+    <section className="mx-auto w-[342px]">
       <nav className="flex justify-between items-center pt-4 ">
         <a href="/" data-barba="link" data-barba-transition="fade">
           <img
