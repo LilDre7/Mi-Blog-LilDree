@@ -6,18 +6,20 @@ import contactme from '../../utils/contact';
 ---
 
 <Layout>
-  <section class="dark:bg-white w-full">
+  <section class="dark:bg-[#FCFCFC] w-full">
     <section class="w-[342px] mx-auto mt-[54px]">
       <div>
         <h1
-          class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold"
+          class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
         >
           Alvaro Aburto Ocampo
         </h1>
-        <h6 class="text-[#A1A09A]">Desarrollador web & movil full-stack</h6>
+        <p class="font-semibold text-[#A1A09A] dark:text-[#706f6c]">
+          Desarrollador web & movil full-stack
+        </p>
       </div>
       <div class="mt-[54px]">
-        <p class="font-normal">
+        <p class="font-normal dark:text-[#1B1B18]">
           Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
           writing, working- out, and teaching. In addition to coding, I also
           make YouTube videos, where I teach mathematics, creative videos on
@@ -29,14 +31,22 @@ import contactme from '../../utils/contact';
           contactme.map((contact) => (
             <section class="flex items-center gap-2 font-normal text-lg">
               <img src="/images/svgIcons/arrow.svg" alt="" />
-              <h4 class="gap-4 py-[3px] text-[#A1A09A] font-medium">
-                {contact}
-              </h4>
+              <ul class="text-[#A1A09A] font-medium py-1">
+                <li>
+                  <a href="mailto:alvaroaburto71@gmail.comsubject=Asunto del correo&body=Cuerpo del mensaje">
+                    {contact.contact}
+                  </a>
+                </li>
+                <li>{contact.email} </li>
+                <li>{contact.resume} </li>
+              </ul>
             </section>
           ))
         }
       </div>
-      <h4 class="font-normal text-lg text-[#EDEDEC] mt-[50px]">
+      <h4
+        class="font-normal text-lg text-[#EDEDEC] mt-[50px] dark:text-[#1B1B18]"
+      >
         Latest Blogs
       </h4>
       <BlogHeader />

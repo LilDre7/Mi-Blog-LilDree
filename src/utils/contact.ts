@@ -1,3 +1,13 @@
-const contactme = ['Email me', 'Connect with me', 'Resume'];
+const contactme = [
+  {
+    email: "Email me"
+  },
+  {
+    contact: "Connect with me"
+  },
+  {
+    resume: "Resume"
+  }
+]
 
 export default contactme;

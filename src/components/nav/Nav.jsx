@@ -20,7 +20,7 @@ const Nav = () => {
   };
 
   return (
-    <section className="dark:bg-white mt-2 mx-auto w-[342px] ">
+    <section className="mx-auto w-[342px] ">
       <nav className="flex justify-between items-center pt-2 ">
         <div className="">
           <img
