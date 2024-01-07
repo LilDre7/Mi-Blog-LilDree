@@ -12,15 +12,16 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/images/logoPersonalBlack.png" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/logoPersonalBlack.png"
     />
+    <script src="../utils//basrba.ts"></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="dark:bg-white max-h-screen h-screen">
+  <body class="dark:bg-white max-h-screen h-screen barba-container">
     <slot />
   </body>
 </html>

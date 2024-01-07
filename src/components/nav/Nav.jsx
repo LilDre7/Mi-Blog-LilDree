@@ -22,7 +22,7 @@ const Nav = () => {
   return (
     <section className="mx-auto w-[342px] ">
       <nav className="flex justify-between items-center pt-4 ">
-        <a href='/' >
+        <a href="/" data-barba="link" data-barba-transition="fade">
           <img
             className="w-10 h-10 rounded-md"
             src="/images/logoPersonalWhite.png"
