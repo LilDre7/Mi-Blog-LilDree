@@ -21,14 +21,14 @@ const Nav = () => {
 
   return (
     <section className="mx-auto w-[342px] ">
-      <nav className="flex justify-between items-center pt-2 ">
-        <div className="">
+      <nav className="flex justify-between items-center pt-4 ">
+        <a href='/' >
           <img
             className="w-10 h-10 rounded-md"
             src="/images/logoPersonalWhite.png"
             alt="logoPersonal"
           />
-        </div>
+        </a>
         <div className="flex gap-3 items-center">
           <NavResponsive />
           <button className="container" onClick={handleTheme}>

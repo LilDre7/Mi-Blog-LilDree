@@ -3,6 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import '../header/header.css';
 import BlogHeader from '../blog/BlogHeader.astro';
 import contactme from '../../utils/contact';
+
+const correo = 'alvaroaburto71@gmail.com';
+const subject = 'Consulta profesional';
+const info =
+  'Estimado Alvaro, me gustaría discutir una oportunidad de colaboración. ¿Podríamos hablar al respecto?';
 ---
 
 <Layout>
@@ -33,11 +38,11 @@ import contactme from '../../utils/contact';
               <img src="/images/svgIcons/arrow.svg" alt="" />
               <ul class="text-[#A1A09A] font-medium py-1">
                 <li>
-                  <a href="mailto:alvaroaburto71@gmail.comsubject=Asunto del correo&body=Cuerpo del mensaje">
-                    {contact.contact}
+                  <a href={`mailto:${correo}?subject=${subject}&body=${info}`}>
+                    {contact.email}
                   </a>
                 </li>
-                <li>{contact.email} </li>
+                <li><a href="/Links/">{contact.contact}</a></li>
                 <li>{contact.resume} </li>
               </ul>
             </section>
