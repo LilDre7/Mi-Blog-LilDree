@@ -1,49 +1,55 @@
-import "../css/NavResponsive.css"
+import React, { useState } from 'react';
 
-const NavResponsive = () => {
+const Menu = () => {
   return (
-    <div className="">
-      <div className="theme-popup">
-        <input type="radio" name="theme" id="default" />
-        <input type="radio" name="theme" id="light" />
-        <input type="radio" name="theme" id="dark" />
-        <input type="checkbox" id="checkbox" />
-        <div className="flex items-center gap-1">
-          <label
-            htmlFor="checkbox"
-            className="theme-popup__button text-[#706F6C] "
-          >
-            Menu
-            <img src="/images/pngIcons/iconPlus.png" alt="" />
-          </label>
-        </div>
-        <div className="theme-popup__list-container">
-          <ul className="theme-popup__list dark:bg-[#FCFCFC] ">
-            <li>
-              <label htmlFor="default">
-                <span>Home</span>
-              </label>
-            </li>
-            <li>
-              <label htmlFor="default">
-                <a href="/About/">About</a>
-              </label>
-            </li>
-            <li>
-              <label htmlFor="dark">
-                <span>Blog</span>
-              </label>
-            </li>
-            <li>
-              <label htmlFor="dark">
-                <span>Gear</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div className="flex items-center gap-1">
+      <h5 className="text-[#A1A09A] text-base">Menu</h5>
+      <img src="/images/pngIcons/iconPlus.png" alt="icons plus" />
     </div>
   );
-}
+};
 
-export default NavResponsive
+const NavLinks = () => {
+  return (
+    <div className="w-1/3">
+      <ul className="flex flex-col md:flex-row gap-3 text-center w-full bg-[#000] text-[#e2e1da] font-semibold text-[16px] p-4 rounded-xl">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Gear</li>
+      </ul>
+    </div>
+  );
+};
+
+const NavResponsive = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClickNav = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <>
+      <nav className="w-1/3 flex justify-end">
+        <div className="hidden w-full justify-between md:flex">
+          <NavLinks />
+        </div>
+        <div className="md:hidden">
+          <button onClick={handleClickNav}>
+            {isOpen ? <Menu /> : <Menu />}
+          </button>
+        </div>
+      </nav>
+      <div className="relative w-full ">
+        {isOpen && (
+          <div className="absolute bg-[#000] w-36 -translate-x-36 translate-y-6 rounded-xl">
+            <NavLinks />
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default NavResponsive;

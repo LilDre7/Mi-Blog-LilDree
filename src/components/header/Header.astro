@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import '../header/header.css';
 import BlogHeader from '../blog/BlogHeader.astro';
 import contactme from '../../utils/contact';
+import { fade } from 'astro:transitions';
 
 const correo = 'alvaroaburto71@gmail.com';
 const subject = 'Consulta profesional';
@@ -10,11 +11,12 @@ const info =
   'Estimado Alvaro, me gustaría discutir una oportunidad de colaboración. ¿Podríamos hablar al respecto?';
 ---
 
-<Layout>
+<Layout title="">
   <section class="dark:bg-[#FCFCFC] w-full">
     <section class="w-[342px] mx-auto mt-[54px]">
       <div>
         <h1
+          transition:animate={fade({ duration: '2s' })}
           class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
         >
           Alvaro Aburto Ocampo
@@ -24,14 +26,14 @@ const info =
         </p>
       </div>
       <div class="mt-[54px]">
-        <p class="font-normal dark:text-[#1B1B18]">
+        <p transition:animate="slide" class="font-normal dark:text-[#1B1B18]">
           Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
           writing, working- out, and teaching. In addition to coding, I also
           make YouTube videos, where I teach mathematics, creative videos on
           code, and personal development.
         </p>
       </div>
-      <div class="mt-[34px]">
+      <div transition:animate="slide" class="mt-[34px]">
         {
           contactme.map((contact) => (
             <section class="flex items-center gap-2 font-normal text-lg">
@@ -42,7 +44,9 @@ const info =
                     {contact.email}
                   </a>
                 </li>
-                <li><a href="/Links/">{contact.contact}</a></li>
+                <li>
+                  <a href="/Links/">{contact.contact}</a>
+                </li>
                 <li>{contact.resume} </li>
               </ul>
             </section>
