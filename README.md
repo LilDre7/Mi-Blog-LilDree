@@ -1,4 +1,4 @@
-# Blog Alvaro Aburto 🤴🏾 6
+s# Blog Alvaro Aburto 🤴🏾 6
 
 # Create proyect by :
 
