@@ -1,4 +1,4 @@
-s# Blog Alvaro Aburto 🤴🏾 6
+s# Blog Alvaro Aburto 🤴🏾 6cs
 
 # Create proyect by :
 
