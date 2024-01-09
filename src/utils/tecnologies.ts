@@ -109,3 +109,4 @@ const tecnologias = [
   },
 ];
 
+export default tecnologias

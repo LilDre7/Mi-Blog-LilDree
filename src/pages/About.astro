@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
 import { fade } from 'astro:transitions';
 import Socials from '../components/socials/Socials.astro';
+import Skill from "../components/skills/Skill"
 ---
 
 <Layout title="About | Alvaro Aburto">
@@ -102,6 +103,9 @@ import Socials from '../components/socials/Socials.astro';
               Technologies I'm familiar with.
             </p>
             <p class="mt-7">2+ years of development experience.</p>
+          </div>
+          <div>
+            <Skill client:only />
           </div>
         </section>
       </div>

@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import tecnlogies from '../../utils/tecnologies';
+---
+
+<Layout title="skills">
+  <section class="mt-10">
+    <div class="grid grid-cols-4 gap-8">
+      {
+        tecnlogies.map((tecnology) => (
+          <div class="flex flex-row">
+            <img
+              class="tecImg w-[45px] h-[45px] object-cover"
+              src={tecnology.imagen}
+              alt=""
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+

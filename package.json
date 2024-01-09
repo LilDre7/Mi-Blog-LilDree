@@ -16,9 +16,12 @@
     "@fontsource-variable/lora": "^5.0.9",
     "@fontsource/macondo-swash-caps": "^5.0.15",
     "@fontsource/merriweather": "^5.0.8",
+    "@react-three/drei": "^9.93.0",
+    "@react-three/fiber": "^8.15.13",
     "@types/gsap": "^3.0.0",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "@types/three": "^0.160.0",
     "astro": "^3.3.0",
     "axios": "^1.5.1",
     "barba.js": "^1.0.0",
@@ -27,7 +30,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "three": "^0.160.0"
   },
   "devDependencies": {
     "prettier": "^3.1.1",
