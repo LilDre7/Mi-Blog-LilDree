@@ -2,21 +2,31 @@ import { useState } from 'react';
 
 const NavLinks = () => {
   return (
-    <div class="w-1/3">
-      <ul class="flex flex-col md:flex-row gap-3 text-center w-full bg-[#000] text-[#e2e1da] font-semibold text-[16px] p-4 rounded-xl">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/About/">About</a>
-        </li>
-        <li>
-          <a href="/Blog/">Blog</a>
-        </li>
-        <li>
-          <a href="/Gear/">Gear</a>
-        </li>
-      </ul>
+    <div className="">
+      <div className="w-1/3">
+        <ul className="flex flex-col md:flex-row gap-3 text-center w-full bg-[#000] text-[#e2e1da] font-semibold text-[16px] p-4 rounded-xl">
+          <li>
+            <a className="w-full pr-20" href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="w-full pr-20" href="/About/">
+              About
+            </a>
+          </li>
+          <li>
+            <a className="w-full pr-20" href="/Blog/">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a className="w-full pr-20" href="/Gear/">
+              Gear
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
@@ -49,9 +59,9 @@ const NavResponsive = () => {
           </button>
         </div>
       </nav>
-      <div className="relative w-full z-50">
+      <div className="relative w-full">
         {isOpen && (
-          <div className="absolute bg-[#000] w-36 -translate-x-36 translate-y-6 rounded-xl">
+          <div className="absolute bg-[#000] w-36 -translate-x-36 translate-y-6 rounded-xl z-50">
             <NavLinks />
           </div>
         )}
