@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import experiences from '../../utils/experience';
+---
+
+<Layout title="experince">
+  <section class="mt-8" >
+    {
+      experiences.map((experience) => (
+        <section>
+          <div class="flex gap-5" >
+            <div>
+              <img class="w-16 h-16 rounded-md " src={experience.image} alt="" />
+            </div>
+            <div>
+              <p class="text-[#ededed] text-lg font-medium" >{experience.place}</p>
+              <p class="text-[#a1a09a] text-base font-medium" >{experience.company}</p>
+            </div>
+            <p class="text-[#a1a09a] text-lg font-medium">{experience.date}</p>
+          </div>
+          <div class="mt-5" >
+            <ul class="text-justify">
+              <li>
+                {experience.description}
+                </li>
+              </ul>
+          </div>
+        </section>
+      ))
+    }
+  </section>
+</Layout>

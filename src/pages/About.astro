@@ -4,6 +4,7 @@ import Nav from '../components/nav/Nav';
 import { fade } from 'astro:transitions';
 import Socials from '../components/socials/Socials.astro';
 import Skill from '../components/skills/Skill';
+import Experiences from '../components/experience/Experiences.astro';
 ---
 
 <Layout title="About | Alvaro Aburto">
@@ -86,9 +87,9 @@ import Skill from '../components/skills/Skill';
         <section class="flex mt-12 flex-col md:flex-row md:gap-9">
           <h2 class="text-lg md:w-28 text-[#a1a09a]">Connect</h2>
           <p class="font-semibold">
-            Have a question or just want to chat? Feel free to<a
-              href="mailto:diego.thonycb@gmail.com"
-              class="underline">email me</a
+            Have a question or just want to chat? Feel free to
+            <a href="mailto:diego.thonycb@gmail.com" class="underline"
+              >email me</a
             >. Try finding me anywhere else at @diego__cb
           </p>
         </section>
@@ -99,13 +100,21 @@ import Skill from '../components/skills/Skill';
         </section>
         <section class="flex mt-12 flex-col md:flex-row md:gap-9">
           <div class="font-medium">
-            <h2 class="text-lg md:w-28 text-[#a1a09a]">Skills</h2><p>
-              Technologies I'm familiar with.
-            </p>
+            <h2 class="text-lg md:w-28 text-[#a1a09a]">Skills</h2>
+            <p>Technologies I'm familiar with.</p>
             <p class="mt-7">2+ years of development experience.</p>
           </div>
           <div>
             <Skill client:only />
+          </div>
+        </section>
+        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+          <div class="font-medium">
+            <h2 class="text-lg md:w-28 text-[#a1a09a]">Work</h2>
+            <p>Some of the opportunities I've got to be a part of</p>
+          </div>
+          <div>
+            <Experiences />
           </div>
         </section>
       </div>
