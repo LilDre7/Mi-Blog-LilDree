@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav/Nav';
+import { fade } from 'astro:transitions';
+import Socials from '../components/socials/Socials.astro';
+---
+
+<Layout title="About | Alvaro Aburto">
+  <main
+    class="dark:bg-[#FCFCFC] min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+  >
+    <section class="">
+      <div transition:animate="slide">
+        <Nav client:only />
+      </div>
+      <div class="w-[342px] mx-auto mt-[54px]">
+        <h1
+          transition:animate="slide"
+          class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
+        >
+          About Me
+        </h1>
+        <p
+          class="text-[#a1a09a] mt-1 font-medium tracking-tight dark:text-[#1B1B18]"
+        >
+          Just a quick glimpse
+        </p>
+      </div>
+      <div class="relative lg:hidden mb-5 w-[338px] mx-auto mt-[54px]">
+        <div>
+          <img
+            class="w-96 h-64 relative inset-0 object-cover rounded-xl -rotate-6"
+            src="/images/imagePersonal/AlvaroIA.jpg"
+            alt="me ai person"
+          />
+        </div>
+        <div>
+          <img
+            class="w-48 h-64 absolute inset-0 object-cover bg-gray-400 shadow-md pointer-events-none rounded-2xl rotate-3 left-[45%] md:left-[60%] md:w-56 top-10"
+            src="/images/imagePersonal/AlvaroPandaCamu.jpg"
+            alt="me full style"
+          />
+        </div>
+        <div class="flex flex-col mt-24 gap-16 md:gap-20">
+          <section class="flex flex-col md:flex-row md:gap-9">
+            <h2 class="text-lg md:w-28 text-[#a1a09a]">About</h2>
+            <div class="flex flex-col gap-8 font-normal tracking-wide">
+              <p>I'm Alvaro Aburto!</p>
+              <p>
+                I'm a college student at
+                <a
+                  class="font-bold text-blue-300"
+                  href="https://www.waketech.edu/"
+                  target="__blank"
+                >
+                  Wake Tech
+                </a>
+                Community College pursuing an Associate in Science degree. I'll be
+                transferring to
+                <a
+                  class="font-bold text-blue-300"
+                  href="https://cs.unc.edu/"
+                  target="__blank"
+                  >UNC Chapel Hill
+                </a>
+                to pursue a Bachelor's degree in Computer Science. With a strong
+                passion for technology, software, and programming languages, I am
+                constantly seeking to expand my knowledge and skills in these areas.
+                I'm also interested in writing and mathematics, and I believe that
+                these subjects complement my technical pursuits. Thank you for visiting
+                my portfolio, and I look forward to sharing my work with you.
+              </p>
+              <p>
+                In addition to coding, I also make <a
+                  class="underline"
+                  href="https://www.youtube.com/@anthony_cb"
+                  target="__blank">YouTube</a
+                >
+                videos, where I teach mathematics, creative videos on code, and personal
+                development.
+              </p>
+            </div>
+          </section>
+        </div>
+        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+          <h2 class="text-lg md:w-28 text-[#a1a09a]">Connect</h2>
+          <p class="font-semibold">
+            Have a question or just want to chat? Feel free to<a
+              href="mailto:diego.thonycb@gmail.com"
+              class="underline">email me</a
+            >. Try finding me anywhere else at @diego__cb
+          </p>
+        </section>
+        <section class="mt-9">
+          <div>
+            <Socials />
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2 class="text-lg md:w-28 text-[#a1a09a]">Connect</h2><p>
+              Technologies I'm familiar with.
+            </p>
+            <p></p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</Layout>

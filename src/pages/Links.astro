@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
-import redes from '../utils/redes';
 import { fade } from 'astro:transitions';
+import Socials from '../components/socials/Socials.astro';
 ---
 
 <Layout title="Alvaro Aburto - Dev Web & Movil">
-  <section class="dark:bg-[#FCFCFC] min-h-screen x">
-    <div class="">
+  <section class="dark:bg-[#FCFCFC] min-h-screen">
+    <div transition:animate="slide">
       <Nav client:only />
     </div>
     <div class="pt-[60px] pb-5">
@@ -33,23 +33,7 @@ import { fade } from 'astro:transitions';
         to coding, I also make YouTube videos. Find me elsewhere @diego__cb
       </p>
       <div transition:animate="slide" class="py-7">
-        {
-          redes.map((social) => (
-            <section class="flex items-center justify-between bg-[#232323] rounded-[8px] mb-3">
-              <a href={social.link} class="flex items-center p-4 gap-5">
-                <img
-                  class="w-6 h-6 filter invert dark:invert-0"
-                  src={social.img}
-                  alt=""
-                />
-                <h3 class="text-base font-medium">{social.titulo}</h3>
-              </a>
-              <a href={social.link} class="-translate-x-6">
-                <img src={social.icon} alt="" />
-              </a>
-            </section>
-          ))
-        }
+        <Socials />
       </div>
     </div>
   </section>

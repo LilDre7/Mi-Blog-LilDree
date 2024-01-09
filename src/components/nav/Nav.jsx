@@ -27,6 +27,7 @@ const Nav = () => {
             className="w-10 h-10 rounded-md"
             src="/images/logoPersonalWhite.png"
             alt="logoPersonal"
+
           />
         </a>
         <div className="flex gap-3 items-center dark:bg-[#FCFCFC] ">

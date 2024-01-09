@@ -5,16 +5,16 @@ const NavLinks = () => {
     <div class="w-1/3">
       <ul class="flex flex-col md:flex-row gap-3 text-center w-full bg-[#000] text-[#e2e1da] font-semibold text-[16px] p-4 rounded-xl">
         <li>
-          <a href="">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="/About/">About</a>
         </li>
         <li>
-          <a href="">Blog</a>
+          <a href="/Blog/">Blog</a>
         </li>
         <li>
-          <a href="">Gear</a>
+          <a href="/Gear/">Gear</a>
         </li>
       </ul>
     </div>
@@ -39,7 +39,7 @@ const NavResponsive = () => {
 
   return (
     <>
-      <nav className="w-1/3 flex justify-end z-50 ">
+      <nav className="w-1/3 flex justify-end">
         <div className="hidden w-full justify-between md:flex">
           <NavLinks />
         </div>

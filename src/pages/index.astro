@@ -1,14 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "@fontsource-variable/lora";
+import Layout from '../layouts/Layout.astro';
+import '@fontsource-variable/lora';
 
-import Nav from "../components/nav/Nav.jsx"
-import Header from "../components/header/Header.astro"
+import Nav from '../components/nav/Nav.jsx';
+import Header from '../components/header/Header.astro';
 ---
 
 <Layout title="Alvaro Aburto - Dev Web & Movil">
-  <main class="min-h-screen dark:bg-[#FCFCFC]" transition:animate="slide">
-    <Nav client:only="react" />
-    <Header />
-  </main>
+    <main transition:animate="slide" class="min-h-screen dark:bg-[#FCFCFC]">
+      <Nav client:only />
+      <Header />
+    </main>
 </Layout>
