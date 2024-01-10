@@ -27,92 +27,94 @@ import Experiences from '../components/experience/Experiences.astro';
           Just a quick glimpse
         </p>
       </div>
-      
 
-        <div class="flex flex-col mt-24 gap-16 md:gap-20">
-          <section class="flex flex-col md:flex-row md:gap-9">
-            <h2 class="text-lg md:w-28 text-[#a1a09a]">About</h2>
-            <div class="flex flex-col gap-8 font-normal tracking-wide">
-              <p>I'm Alvaro Aburto!</p>
-              <p>
-                I'm a college student at
-                <a
-                  class="font-bold text-blue-300"
-                  href="https://www.waketech.edu/"
-                  target="__blank"
-                >
-                  Wake Tech
-                </a>
-                Community College pursuing an Associate in Science degree. I'll be
-                transferring to
-                <a
-                  class="font-bold text-blue-300"
-                  href="https://cs.unc.edu/"
-                  target="__blank"
-                  >UNC Chapel Hill
-                </a>
-                to pursue a Bachelor's degree in Computer Science. With a strong
-                passion for technology, software, and programming languages, I am
-                constantly seeking to expand my knowledge and skills in these areas.
-                I'm also interested in writing and mathematics, and I believe that
-                these subjects complement my technical pursuits. Thank you for visiting
-                my portfolio, and I look forward to sharing my work with you.
-              </p>
-              <p>
-                In addition to coding, I also make <a
-                  class="underline"
-                  href="https://www.youtube.com/@anthony_cb"
-                  target="__blank">YouTube</a
-                >
-                videos, where I teach mathematics, creative videos on code, and personal
-                development.
-              </p>
-            </div>
-          </section>
-        </div>
-        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-          <h2 class="text-lg md:w-28 text-[#a1a09a]">Connect</h2>
-          <p class="font-semibold">
-            Have a question or just want to chat? Feel free to
-            <a href="mailto:diego.thonycb@gmail.com" class="underline"
-              >email me</a
-            >. Try finding me anywhere else at @diego__cb
-          </p>
-        </section>
-        <section class="mt-9">
-          <div>
-            <Socials />
-          </div>
-        </section>
-        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-          <div class="font-medium">
-            <h2 class="text-lg md:w-28 text-[#a1a09a]">Skills</h2>
-            <p>Technologies I'm familiar with.</p>
-            <p class="mt-7">2+ years of development experience.</p>
-          </div>
-          <div>
-            <Skill client:only />
-          </div>
-        </section>
-        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-          <div class="font-medium">
-            <h2 class="text-lg md:w-28 text-[#a1a09a]">Work</h2>
-            <p>Some of the opportunities I've got to be a part of</p>
-          </div>
-          <div>
-            <Experiences />
-          </div>
-        </section>
-        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-          <div class="font-medium">
-            <h2 class="text-lg md:w-28 text-[#a1a09a]">Side projects</h2>
-            <p>I enjoy exploring my interests through projects</p>
-          </div>
-          <div>
-            <Experiences />
+      <div class="flex flex-col mt-24 gap-16 md:gap-20">
+        <section class="flex flex-col md:flex-row md:gap-9">
+          <h2 class="text-lg md:w-28 text-[#a1a09a]">About</h2>
+          <div class="flex flex-col gap-8 font-normal tracking-wide">
+            <p>I'm Alvaro Aburto!</p>
+            <p>
+              I'm a college student at
+              <a
+                class="font-bold text-blue-300"
+                href="https://www.waketech.edu/"
+                target="__blank"
+              >
+                Wake Tech
+              </a>
+              Community College pursuing an Associate in Science degree. I'll be
+              transferring to
+              <a
+                class="font-bold text-blue-300"
+                href="https://cs.unc.edu/"
+                target="__blank"
+                >UNC Chapel Hill
+              </a>
+              to pursue a Bachelor's degree in Computer Science. With a strong passion
+              for technology, software, and programming languages, I am constantly
+              seeking to expand my knowledge and skills in these areas. I'm also
+              interested in writing and mathematics, and I believe that these subjects
+              complement my technical pursuits. Thank you for visiting my portfolio,
+              and I look forward to sharing my work with you.
+            </p>
+            <p>
+              In addition to coding, I also make <a
+                class="underline"
+                href="https://www.youtube.com/@anthony_cb"
+                target="__blank">YouTube</a
+              >
+              videos, where I teach mathematics, creative videos on code, and personal
+              development.
+            </p>
           </div>
         </section>
       </div>
+
+      <section class="flex mt-12 flex-col md:flex-row">
+        <h2 class="text-lg md:w-28 text-[#a1a09a]">Connect</h2>
+        <p class="font-semibold">
+          Have a question or just want to chat? Feel free to
+          <a href="mailto:diego.thonycb@gmail.com" class="underline">email me</a
+          >. Try finding me anywhere else at @diego__cb
+        </p>
+      </section>
+
+      <section class="mt-9">
+        <div>
+          <Socials />
+        </div>
+      </section>
+
+      <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+        <div class="font-medium">
+          <h2 class="text-lg md:w-28 text-[#a1a09a]">Skills</h2>
+          <p>Technologies I'm familiar with.</p>
+          <p class="mt-7">2+ years of development experience.</p>
+        </div>
+        <div>
+          <Skill client:only />
+        </div>
+      </section>
+
+      <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+        <div class="font-medium">
+          <h2 class="text-lg md:w-28 text-[#a1a09a]">Work</h2>
+          <p>Some of the opportunities I've got to be a part of</p>
+        </div>
+        <div>
+          <Experiences />
+        </div>
+      </section>
+
+      <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+        <div class="font-medium">
+          <h2 class="text-lg md:w-28 text-[#a1a09a]">Side projects</h2>
+          <p>I enjoy exploring my interests through projects</p>
+        </div>
+        <div>
+          <Experiences />
+        </div>
+      </section>
     </main>
   </section>
 </Layout>
