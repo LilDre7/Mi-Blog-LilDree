@@ -4,10 +4,10 @@ import redes from '../../utils/redes';
 ---
 
 <Layout title="socials">
-  <section>
+  <section class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-2">
     {
       redes.map((social) => (
-        <section class="flex items-center justify-between bg-[#232323] rounded-[8px] mb-3">
+        <section class="flex items-center justify-between bg-[#232323] rounded-[8px] gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
           <a href={social.link} class="flex items-center p-4 gap-5">
             <img
               class="w-6 h-6 filter invert dark:invert-0"

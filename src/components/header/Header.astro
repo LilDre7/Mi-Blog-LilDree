@@ -12,7 +12,9 @@ const info =
 ---
 
 <Layout title="">
-  <section class="dark:bg-[#FCFCFC] w-full px-6 md:px-6 md:pb-2 max-w-[700px] mx-auto">
+  <section
+    class="dark:bg-[#FCFCFC] w-full px-6 md:px-6 md:pb-2 max-w-[700px] mx-auto"
+  >
     <section transition:animate="slide" class="max-w-[700px] mt-[54px]">
       <div transition:animate="slide">
         <h1
@@ -25,7 +27,7 @@ const info =
           Desarrollador web & movil full-stack
         </p>
       </div>
-      <div class="mt-[54px]">
+      <div class="mt-[54px] md:w-[75%]">
         <p transition:animate="slide" class="font-normal dark:text-[#1B1B18]">
           Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
           writing, working- out, and teaching. In addition to coding, I also
@@ -33,12 +35,15 @@ const info =
           code, and personal development.
         </p>
       </div>
-      <div transition:animate="slide" class="mt-[34px]">
+      <div
+        transition:animate="slide"
+        class="mt-[34px] md:flex md:items-center md:gap-4"
+      >
         {
           contactme.map((contact) => (
-            <section class="flex items-center gap-2 font-normal text-lg">
+            <section class="flex items-center gap-2 font-normal text-lg md:flex md:flex-row md:items-center">
               <img src="/images/svgIcons/arrow.svg" alt="" />
-              <ul class="text-[#A1A09A] font-medium py-1">
+              <ul class="text-[#A1A09A] font-medium py-1 md:flex md:items-center ">
                 <li>
                   <a href={`mailto:${correo}?subject=${subject}&body=${info}`}>
                     {contact.email}

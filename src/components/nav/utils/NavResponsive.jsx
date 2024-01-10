@@ -3,30 +3,31 @@ import '../css/navStyle.css';
 
 const NavLinks = () => {
   return (
-    <section className="list-menu">
-      <ul className="list-ul">
-        <li className="list-li">
-          <a className="link-menu" href="/">
-            Home
-          </a>
-        </li>
-        <li className="list-li">
-          <a className="link-menu" href="/About/">
-            About
-          </a>
-        </li>
-        <li className="list-li">
-          <a className="link-menu" href="/Blog/">
-            Blog
-          </a>
-        </li>
-        <li className="list-li">
-          <a className="link-menu" href="/Gear/">
-            Gear
-          </a>
-        </li>
-      </ul>
-    </section>
+    <section class="list-menu">
+  <ul class="list-ul flex">
+    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+      <a class="link-menu text-[#a1a09a] block w-full" href="/">
+        Home
+      </a>
+    </li>
+    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+      <a class="link-menu text-[#a1a09a] block w-full" href="/About/">
+        About
+      </a>
+    </li>
+    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+      <a class="link-menu text-[#a1a09a] block w-full" href="/Blog/">
+        Blog
+      </a>
+    </li>
+    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+      <a class="link-menu text-[#a1a09a] block w-full" href="/Gear/">
+        Gear
+      </a>
+    </li>
+  </ul>
+</section>
+
   );
 };
 
@@ -53,7 +54,7 @@ const NavResponsive = () => {
           <NavLinks />
         </div>
         <div className="md:hidden">
-          <button className='cursor-pointer' onClick={handleClickNav}>
+          <button className="cursor-pointer" onClick={handleClickNav}>
             {isOpen ? <Menu /> : <Menu />}
           </button>
         </div>

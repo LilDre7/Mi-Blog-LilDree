@@ -20,7 +20,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="relative md:sticky top-0 z-20">
+    <header className="relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]">
       <nav className="px-4 sm:px-6 py-3 max-w-[700px] gap-3 flex justify-between items-center pt-2 dark:bg-[#FCFCFC] sm:mx-auto">
         <div>
           <a href="/">
@@ -36,7 +36,10 @@ const Nav = () => {
             <div className="sm:mx-auto">
               <NavResponsive />
             </div>
-            <button className="container" onClick={handleTheme}>
+            <button
+              className="flex items-center justify-center w-[40px] "
+              onClick={handleTheme}
+            >
               <Moon />
             </button>
           </div>
