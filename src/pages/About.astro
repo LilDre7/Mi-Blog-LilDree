@@ -1,21 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
-import { fade } from 'astro:transitions';
 import Socials from '../components/socials/Socials.astro';
 import Skill from '../components/skills/Skill';
 import Experiences from '../components/experience/Experiences.astro';
 ---
 
 <Layout title="About | Alvaro Aburto">
-  <main
-    class="dark:bg-[#FCFCFC] min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
-  >
-    <section class="">
-      <div transition:animate="slide">
-        <Nav client:only />
-      </div>
-      <div class="w-[342px] mx-auto mt-[54px]">
+  <section class="">
+    <div class="w-full" transition:animate="slide">
+      <Nav client:only />
+    </div>
+    <main
+      class="dark:bg-[#FCFCFC] min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+    >
+      <div class="mx-auto mt-[54px]">
         <h1
           transition:animate="slide"
           class="font text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
@@ -28,21 +27,37 @@ import Experiences from '../components/experience/Experiences.astro';
           Just a quick glimpse
         </p>
       </div>
-      <div class="relative lg:hidden mb-5 w-[338px] mx-auto mt-[54px]">
-        <div>
-          <img
-            class="w-96 h-64 relative inset-0 object-cover rounded-xl -rotate-6"
-            src="/images/imagePersonal/AlvaroIA.jpg"
-            alt="me ai person"
-          />
-        </div>
-        <div>
-          <img
-            class="w-48 h-64 absolute inset-0 object-cover bg-gray-400 shadow-md pointer-events-none rounded-2xl rotate-3 left-[45%] md:left-[60%] md:w-56 top-10"
-            src="/images/imagePersonal/AlvaroPandaCamu.jpg"
-            alt="me full style"
-          />
-        </div>
+      <div class="relative mb-5 mx-auto mt-[54px]">
+        <section class="flex gap-4 relative mx-auto">
+          <div>
+            <img
+              class="w-96 h-64 sm:w-72 sm:h-48 relative inset-0 object-cover rounded-xl -rotate-6 sm:-rotate-8"
+              src="/images/imagePersonal/AlvaroIA.jpg"
+              alt="me ai person"
+            />
+          </div>
+          <div>
+            <img
+              class="w-48 h-64 absolute inset-0 object-cover bg-gray-400 shadow-md pointer-events-none rounded-2xl rotate-3 left-[45%] md:left-[20%] md:w-56 top-10 sm:-top-1 sm:w-44 md:h-56 "
+              src="/images/imagePersonal/AlvaroPandaCamu.jpg"
+              alt="me full style"
+            />
+          </div>
+          <div>
+            <img
+              class="w-96 h-64 sm:w-72 sm:h-48 relative inset-0 object-cover rounded-xl -rotate-6 sm:-rotate-8 hidden md:block "
+              src="/images/imagePersonal/AlvaroIA.jpg"
+              alt="me ai person"
+            />
+          </div>
+          <div>
+            <img
+              class="w-48 h-64 absolute inset-0 object-cover bg-gray-400 shadow-md pointer-events-none rounded-2xl rotate-3 left-[45%] md:left-[80%] md:w-56 top-10 sm:-top-1 sm:w-44 sm:h-56  hidden md:block "
+              src="/images/imagePersonal/AlvaroPandaCamu.jpg"
+              alt="me full style"
+            />
+        </section>
+
         <div class="flex flex-col mt-24 gap-16 md:gap-20">
           <section class="flex flex-col md:flex-row md:gap-9">
             <h2 class="text-lg md:w-28 text-[#a1a09a]">About</h2>
@@ -117,7 +132,16 @@ import Experiences from '../components/experience/Experiences.astro';
             <Experiences />
           </div>
         </section>
+        <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+          <div class="font-medium">
+            <h2 class="text-lg md:w-28 text-[#a1a09a]">Side projects</h2>
+            <p>I enjoy exploring my interests through projects</p>
+          </div>
+          <div>
+            <Experiences />
+          </div>
+        </section>
       </div>
-    </section>
-  </main>
+    </main>
+  </section>
 </Layout>
