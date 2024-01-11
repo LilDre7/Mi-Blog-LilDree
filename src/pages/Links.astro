@@ -7,10 +7,10 @@ import Socials from '../components/socials/Socials.astro';
 
 <Layout title="Alvaro Aburto - Dev Web & Movil">
   <section class="dark:bg-[#FCFCFC] min-h-screen">
-    <div transition:animate="slide">
+    <div class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]" transition:animate="slide">
       <Nav client:only />
     </div>
-    <div class="pt-[60px] pb-5">
+    <div class="pt-[20px] pb-5">
       <img
         transition:animate="slide"
         class="rounded-full mx-auto h-[190px] w-[110px] object-cover"
@@ -18,7 +18,7 @@ import Socials from '../components/socials/Socials.astro';
         alt="Alvaro Aburto"
       />
     </div>
-    <div class="mx-10">
+    <div class="mx-10 max-w-[600px] sm:mx-auto">
       <h1
         transition:animate={fade({ duration: '2s' })}
         class="font text-2xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18] text-center"
@@ -26,13 +26,13 @@ import Socials from '../components/socials/Socials.astro';
         Alvaro Aburto
       </h1>
       <p
-        transition:name="x"
-        class="text-[#a1a09a] text-center font-medium tracking-tight dark:text-[#1B1B18]"
+        transition:animate={fade({duration: "3s"})}
+        class="text-[#a1a09a] font-semibold mx-auto dark:text-[#1B1B18] text-center max-w-sm"
       >
         Software engineer who loves building cool things with code. In addition
         to coding, I also make YouTube videos. Find me elsewhere @diego__cb
       </p>
-      <div transition:animate="slide" class="py-7">
+      <div class="mt-10" transition:animate="slide">
         <Socials />
       </div>
     </div>

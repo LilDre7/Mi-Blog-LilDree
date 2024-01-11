@@ -49,7 +49,7 @@ const NavResponsive = () => {
 
   return (
     <>
-      <nav className="flex sm:justify-between">
+      <nav className="flex sm:justify-between cursor-pointer">
         <div className="hidden md:flex items-center gap-1">
           <NavLinks />
         </div>

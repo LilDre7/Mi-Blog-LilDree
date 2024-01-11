@@ -21,11 +21,11 @@ const Nav = () => {
 
   return (
     <header className="relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]">
-      <nav className="px-4 sm:px-6 py-3 max-w-[700px] gap-3 flex justify-between items-center pt-2 dark:bg-[#FCFCFC] sm:mx-auto">
+      <nav className="px-4 sm:px-6 py-3 max-w-[700px] gap-3 flex justify-between items-center pt-2 dark:bg-[#FCFCFC] sm:mx-auto dark:text-[#706f6c]">
         <div>
           <a href="/">
             <img
-              className="w-10 h-10 rounded-md"
+              className="w-10 h-10 rounded-md cursor-pointer"
               src="/images/logoPersonalWhite.png"
               alt="logoPersonal"
             />

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav/Nav';
+import { fade } from 'astro:transitions';
+---
+
+<Layout title="Blog | Alvaro Aburto">
+  <section class="w-full dark:bg-[#FCFCFC]">
+    <div
+      class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]"
+      transition:animate="slide"
+    >
+      <Nav client:only />
+    </div>
+    <main
+      transition:animate={fade({ duration: '2s' })}
+      class="min-h-screen px-24 md:px-6 pt-16 pb-24 md:pb-44 max-w-[700px] mx-auto"
+    >
+      <div>
+        <h1 class="text-[#ededec] text-[35px] font-bold">Blog</h1>
+        <p class="text-[#a1a09a] text-[18px] font-semibold">
+          6 posts about code, weight-lifting, food, and more ...
+        </p>
+      </div>
+    </main>
+  </section>
+</Layout>
