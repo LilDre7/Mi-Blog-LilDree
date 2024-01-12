@@ -4,23 +4,23 @@ import '../css/navStyle.css';
 const NavLinks = () => {
   return (
     <section class="list-menu">
-  <ul class="list-ul flex">
-    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+  <ul class="list-ul flex flex-col md:flex md:flex-row">
+    <li class="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
       <a class="link-menu text-[#a1a09a] block w-full" href="/">
         Home
       </a>
     </li>
-    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+    <li class="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
       <a class="link-menu text-[#a1a09a] block w-full" href="/About/">
         About
       </a>
     </li>
-    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+    <li class="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
       <a class="link-menu text-[#a1a09a] block w-full" href="/Blog/">
         Blog
       </a>
     </li>
-    <li class="list-li overflow-hidden p-2 md:p-4 text-base font-normal">
+    <li class="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
       <a class="link-menu text-[#a1a09a] block w-full" href="/Gear/">
         Gear
       </a>
@@ -61,7 +61,7 @@ const NavResponsive = () => {
       </nav>
       <div className="relative w-full">
         {isOpen && (
-          <div className="absolute bg-[#000] w-36 sm:w-full sm:relative -translate-x-32 translate-y-6 rounded-xl z-50">
+          <div className="absolute bg-[#000] w-36 sm:w-full sm:relative -translate-x-20 translate-y-5 rounded-xl z-50">
             <NavLinks />
           </div>
         )}

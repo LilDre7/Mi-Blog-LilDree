@@ -29,7 +29,7 @@ const articulos = [
   },
   {
     titulo: 'Automatización de Tareas con Gulp',
-    fechaCreacion: 'Feb 1, 2020',
+    fechaCreacion: 'Feb 01, 2020',
     imagenURL: '/images/imageBlog/articleGulp.jpg',
     descripcion:
       'Aprende a utilizar Gulp, una herramienta de automatización de tareas en JavaScript. Descubre cómo simplificar y mejorar tu flujo de trabajo mediante la automatización de tareas como la minificación de archivos, la optimización de imágenes y más.',
