@@ -1,0 +1,77 @@
+/* --------------------------
+    Page
+--------------------------- */
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --------------------------
+    Containers
+--------------------------- */
+
+/* Preview / Fullscreen */
+.preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+/* Images */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  opacity: 0.5;
+  transition: transform cubic-bezier(0.2, 1, 0.3, 1) 0.8s;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  margin: 1.4vw 0;
+  padding: 0.8vw;
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover .preview-container,
+a:active .preview-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+a:hover h2 {
+  transform: translateX(0.6vw);
+}
+
+/* --------------------------
+    Image Sizes
+--------------------------- */
+
+.square img {
+  width: 24vw;
+  height: auto;
+}
+
+.portrait img {
+  width: 20vw;
+  height: auto;
+}
+
+.landscape img {
+  width: 32vw;
+  height: auto;
+}

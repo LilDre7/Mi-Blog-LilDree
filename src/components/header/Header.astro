@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import '../header/header.css';
-import BlogHeader from '../blog/BlogHeader.astro';
 import contactme from '../../utils/contact';
 import { fade } from 'astro:transitions';
+import BlogHeader from '../blog/BlogHeader';
 // import { fade } from 'astro:transitions';
 
 const correo = 'alvaroaburto71@gmail.com';
@@ -29,7 +29,10 @@ const info =
         </p>
       </div>
       <div class="mt-[60px] md:w-[75%]">
-        <p transition:animate={fade({ duration: '2s' })}  class="font-normal dark:text-[#1B1B18]">
+        <p
+          transition:animate={fade({ duration: '2s' })}
+          class="font-normal dark:text-[#1B1B18]"
+        >
           Hi, I'm Diego Cabrera, a computer science student who enjoys coding,
           writing, working- out, and teaching. In addition to coding, I also
           make YouTube videos, where I teach mathematics, creative videos on
@@ -61,10 +64,12 @@ const info =
           ))
         }
       </div>
-      <h4 class="font-normal text-lg text-[#EDEDEC] dark:text-[#1B1B18]">
+      <h4
+        class="font-semibold tracking-wide mb-8 text-lg text-[#EDEDEC] dark:text-[#1B1B18]"
+      >
         Latest Blogs
       </h4>
-      <BlogHeader />
+      <BlogHeader  />
     </section>
   </section>
 </Layout>
