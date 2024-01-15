@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
 import { fade } from 'astro:transitions';
+import BlogHeader from '../components/blog/BlogHeader';
 ---
 
 <Layout title="Blog | Alvaro Aburto">
@@ -14,14 +15,19 @@ import { fade } from 'astro:transitions';
     </div>
     <main
       transition:animate={fade({ duration: '2s' })}
-      class="min-h-screen px-24 md:px-6 pt-16 pb-24 md:pb-44 max-w-[700px] mx-auto"
+      class="min-h-screen md:px-24 px-6 pt-16 pb-24 md:pb-44 sm:max-w-[700px] mx-auto"
     >
-      <div>
-        <h1 class="text-[#ededec] text-[35px] font-bold">Blog</h1>
-        <p class="text-[#a1a09a] text-[18px] font-semibold">
+      <section>
+        <h1 class="text-[#ededec] text-[35px] font-bold dark:text-[#1b1b18]">
+          Blog
+        </h1>
+        <p class="text-[#a1a09a] text-[18px] font-semibold dark:text-[#706f6c]">
           6 posts about code, weight-lifting, food, and more ...
         </p>
-      </div>
+        <section>
+          <BlogHeader />
+        </section>
+      </section>
     </main>
   </section>
 </Layout>

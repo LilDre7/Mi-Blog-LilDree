@@ -60,14 +60,6 @@ const BlogHeader = () => {
           </a>
         </div>
       ))}
-      <section className="sm:pb-28 sm:pt-8">
-        <a
-          className="text-[#EDEDEC] border-solid border-white border-b-2 font-semibold text-base dark:text-[#1B1B18] dark:border-[#1B1B19]"
-          href="/Blog/"
-        >
-          See All
-        </a>
-      </section>
     </section>
   );
 };

@@ -1,13 +1,14 @@
 ---
+import { fade } from 'astro:transitions';
 import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="About Image">
   <div class="relative mb-5 mx-auto mt-[54px]">
-    <section class="flex gap-4 relative mx-auto">
+    <section transition:animate={fade({ duration: '2s' })} class="z flex gap-4 relative mx-auto">
       <div>
         <img
-          class="w-96 h-64 sm:w-72 sm:h-48 relative inset-0 object-cover rounded-xl -rotate-6 sm:-rotate-8"
+          class="w-96 h-64 sm:w-72 sm:h-48 relative inset-0 object-cover rounded-xl -rotate-6 sm:-rotate-8 overflow-hidden"
           src="/images/imagePersonal/AlvaroIA.jpg"
           alt="me ai person"
         />
@@ -22,14 +23,14 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <img
           class="w-96 h-64 sm:w-72 sm:h-48 relative inset-0 object-cover rounded-xl -rotate-6 sm:-rotate-8 hidden md:block"
-          src="/images/imagePersonal/AlvaroIA.jpg"
+          src="/images/imagePersonal/circuitos.jpg"
           alt="me ai person"
         />
       </div>
       <div>
         <img
           class="w-48 h-64 absolute inset-0 object-cover bg-gray-400 shadow-md pointer-events-none rounded-2xl rotate-3 left-[45%] md:left-[80%] md:w-56 top-10 sm:-top-1 sm:w-44 sm:h-56 hidden md:block"
-          src="/images/imagePersonal/AlvaroPandaCamu.jpg"
+          src="/images/imagePersonal/set-up.jpg"
           alt="me full style"
         />
       </div>

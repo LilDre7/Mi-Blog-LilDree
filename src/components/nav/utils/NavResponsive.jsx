@@ -60,7 +60,7 @@ const NavResponsive = () => {
       </nav>
       <div className="relative w-full">
         {isOpen && (
-          <div className="absolute bg-[#000] transition-shadow duration-150 w-36 sm:w-full sm:relative -translate-x-20 translate-y-2 rounded-xl z-50">
+          <div className="absolute bg-[#000] dark:bg-[#fcfcfc] dark:text-[#1B1B18] transition-shadow duration-150 w-36 sm:w-full sm:relative -translate-x-20 translate-y-2 rounded-xl z-50 shadow-2xl">
             <NavLinks />
           </div>
         )}

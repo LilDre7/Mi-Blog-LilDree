@@ -20,9 +20,8 @@ import AboutImage from '../components/about/AboutImage.astro';
       transition:animate={fade({ duration: '2s' })}
       class="min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
     >
-      <div class="mx-auto mt-[54px]">
+      <div transition:animate={fade({ duration: '2s' })} class="mx-auto mt-[54px]">
         <h1
-          transition:animate="slide"
           class="text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
         >
           About Me
@@ -37,7 +36,7 @@ import AboutImage from '../components/about/AboutImage.astro';
         </div>
       </div>
 
-      <section class="flex flex-col md:flex-row md:gap-20 md:mt-16">
+      <section transition:animate={fade({ duration: '2s' })} class="flex flex-col md:flex-row md:gap-20 md:mt-16">
         <h2 class="text-lg md:w-20 dark:text-[hsl(45, 2%, 43%)] text-[#a1a09a]">
           About
         </h2>
@@ -124,7 +123,7 @@ import AboutImage from '../components/about/AboutImage.astro';
             I enjoy exploring my interests through projects
           </p>
           <div class="-mt-5" >
-            <Experiences />
+            <!-- <Experiences /> -->
           </div>
         </div>
       </section>
