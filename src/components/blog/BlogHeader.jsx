@@ -3,6 +3,9 @@ import articulo from '../../utils/articles';
 import './blogStyle.css';
 
 const BlogHeader = () => {
+
+  const articulos = articulo.slice(0, 4);
+
   const projectPreviewsRef = useRef([]);
   const throttleTimerRef = useRef(null);
 
@@ -32,7 +35,7 @@ const BlogHeader = () => {
 
   return (
     <section className="dark:bg-[#FCFCFC] h-screen max-w-[350px] mx-auto sm:max-w-[700px]">
-      {articulo.map((art) => (
+      {articulos.map((art) => (
         <div className="container">
           <a className="flex justify-between py-2" href="/">
             <div className="md:flex md:gap-8 md:py-3">
