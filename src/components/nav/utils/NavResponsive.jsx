@@ -27,12 +27,12 @@ const NavLinks = () => {
       <ul className="list-ul flex flex-col md:flex md:flex-row">
         <li className="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
           <a className="link-menu text-[#a1a09a] block w-full" href="/">
-            Home
+            Homes
           </a>
         </li>
         <li className="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
           <a className="link-menu text-[#a1a09a] block w-full" href="/About/">
-            About
+            Abouts
           </a>
         </li>
         <li className="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
