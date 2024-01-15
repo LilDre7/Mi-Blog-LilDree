@@ -28,6 +28,7 @@
     "boxicons": "^2.1.4",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
+    "million": "^2.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",

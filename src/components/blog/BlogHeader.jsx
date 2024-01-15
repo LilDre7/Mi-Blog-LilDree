@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import articulo from '../../utils/articles';
-import './blog.css';
+import './blogStyle.css';
 
 const BlogHeader = () => {
   const projectPreviewsRef = useRef([]);
@@ -31,37 +31,33 @@ const BlogHeader = () => {
   }, []);
 
   return (
-    <section className="dark:bg-[#FCFCFC] h-screen max-w-[700px] sm:w-full">
+    <section className="dark:bg-[#FCFCFC] h-screen max-w-[350px] mx-auto sm:max-w-[700px]">
       {articulo.map((art) => (
-        <div className="flex md:container">
-          <a href="">
+        <div className="container">
+          <a className="flex justify-between py-2" href="/">
             <div className="md:flex md:gap-8 md:py-3">
               <p className="text-[#A1A09A] font-medium md:w-40">
                 {art.fechaCreacion}
               </p>
-              <h2 className="text-[#EDEDEC] text-lg  w-52 md:w-full font-semibold dark:text-[#1B1B18]">
+              <h2 className="text-[#EDEDEC] text-lg tracking-tight w-52 md:w-full font-semibold dark:text-[#1B1B18]">
                 {art.titulo}
               </h2>
             </div>
-            <div className="preview-container">
+            <div className="flex py-4 preview-container">
               <div
-                className="w-[96px] h-[96px] relative aspect-square image-container square"
+                className="aspect-square min-w-24 w-24 h-20 relative drop-shadow-sm"
                 ref={(ref) => projectPreviewsRef.current.push(ref)}
               >
-                <img
-                  className="absolute rounded-xl max-w-40 max-h-40 object-cover"
-                  src={art.imagenURL}
-                  alt={art.titulo}
-                />
+                <img className="w-full h-full object-cover rounded-lg" src={art.imagenURL} alt={art.titulo} />
               </div>
             </div>
           </a>
         </div>
       ))}
-      <section className="">
+      <section className="mt-7 pb-14">
         <a
           className="text-[#EDEDEC] border-solid border-white border-b-2 font-semibold text-base dark:text-[#1B1B18] dark:border-[#1B1B19]"
-          href="#"
+          href="/Blog/"
         >
           See All
         </a>
