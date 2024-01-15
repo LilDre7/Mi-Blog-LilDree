@@ -5,21 +5,25 @@ import Socials from '../components/socials/Socials.astro';
 import Skill from '../components/skills/Skill';
 import Experiences from '../components/experience/Experiences.astro';
 import { fade } from 'astro:transitions';
+import AboutImage from '../components/about/AboutImage.astro';
 ---
 
 <Layout title="About | Alvaro Aburto">
   <section class="w-full dark:bg-[#FCFCFC]">
-    <div class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]" transition:animate="slide">
+    <div
+      class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]"
+      transition:animate="slide"
+    >
       <Nav client:only />
     </div>
     <main
-      transition:animate={fade({ duration: '2s' })} 
-      class=" min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+      transition:animate={fade({ duration: '2s' })}
+      class="min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
     >
       <div class="mx-auto mt-[54px]">
         <h1
           transition:animate="slide"
-          class=" text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
+          class="text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
         >
           About Me
         </h1>
@@ -28,13 +32,18 @@ import { fade } from 'astro:transitions';
         >
           Just a quick glimpse
         </p>
+        <div class="pb-14">
+          <AboutImage />
+        </div>
       </div>
 
       <section class="flex flex-col md:flex-row md:gap-20 md:mt-16">
-        <h2 class="text-lg md:w-20 text-[#a1a09a]">About</h2>
+        <h2 class="text-lg md:w-20 dark:text-[hsl(45, 2%, 43%)] text-[#a1a09a]">
+          About
+        </h2>
         <div class="flex flex-col gap-8 font-normal tracking-wide">
-          <p>I'm Alvaro Aburto!</p>
-          <p>
+          <p class="dark:text-[#1b1b18]">I'm Alvaro Aburto!</p>
+          <p class="dark:text-[#1b1b18]">
             I'm a college student at
             <a
               class="font-bold text-blue-300"
@@ -58,7 +67,7 @@ import { fade } from 'astro:transitions';
             my technical pursuits. Thank you for visiting my portfolio, and I look
             forward to sharing my work with you.
           </p>
-          <p>
+          <p class="dark:text-[#1b1b18]">
             In addition to coding, I also make <a
               class="underline"
               href="https://www.youtube.com/@anthony_cb"
@@ -73,7 +82,7 @@ import { fade } from 'astro:transitions';
       <section class="flex mt-12 flex-col md:flex-row md:gap-14">
         <h2 class="text-lg md:w-24 text-[#a1a09a]">Connect</h2>
         <div class="flex flex-col w-full gap-8">
-          <p class="font-semibold">
+          <p class="font-semibold dark:text-[#1b1b18]">
             Have a question or just want to chat? Feel free to
             <a href="mailto:diego.thonycb@gmail.com" class="underline"
               >email me</a
@@ -86,8 +95,10 @@ import { fade } from 'astro:transitions';
       <section class="flex mt-12 flex-col md:flex-row md:gap-9">
         <h2 class="text-lg md:w-24 text-[#a1a09a]">Skills</h2>
         <div class="flex flex-col w-full gap-3">
-          <p class="font-semibold">Technologies I'm familiar with.</p>
-          <p class="font-semibold text-lg mt-3">
+          <p class="font-semibold dark:text-[#1b1b18]">
+            Technologies I'm familiar with.
+          </p>
+          <p class="font-semibold text-lg mt-3 dark:text-[#1b1b18]">
             2+ years of development experience.
           </p>
           <Skill client:only />
@@ -95,20 +106,26 @@ import { fade } from 'astro:transitions';
       </section>
 
       <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-        <h2 class="text-lg md:w-24 text-[#a1a09a]">Work</h2>
+        <h2 class="text-lg md:w-24 text-[#a1a09a] dark:text-[#706f6c]">Work</h2>
         <div class="flex flex-col w-full gap-3">
-          <p class="font-semibold">
+          <p class="font-semibold dark:text-[#1b1b18]">
             Some of the opportunities I've got to be a part of
           </p>
-          <Experiences />
+          <div class="-mt-5" >
+            <Experiences />
+          </div>
         </div>
       </section>
 
       <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-        <h2 class="text-lg md:w-28 text-[#a1a09a]">Side projects</h2>
+        <h2 class="text-lg md:w-28 text-[#a1a09a] dark:text-[#706f6c]">Side projects</h2>
         <div class="flex flex-col w-full gap-3">
-          <p class="font-semibold">I enjoy exploring my interests through projects</p>
-          <Experiences />
+          <p class="font-semibold dark:text-[#1b1b18]">
+            I enjoy exploring my interests through projects
+          </p>
+          <div class="-mt-5" >
+            <Experiences />
+          </div>
         </div>
       </section>
     </main>

@@ -6,31 +6,29 @@ import experiences from '../../utils/experience';
 <Layout title="experince">
   <section class="mt-8">
     {
-      experiences.map((experience) => (
+      experiences.map((experience, index) => (
         <section class="mt-8">
           <div class="flex gap-3">
             <div>
-              <img
-                class="w-16 h-16 rounded-md "
-                src={experience.image}
-                alt=""
-              />
+              <img class="w-16 h-16 object-cover rounded-md" src={experience.image} alt="" />
             </div>
-            <div>
-              <p class="text-[#ededed] text-lg font-medium">
-                {experience.place}
-              </p>
-              <p class="text-[#a1a09a] text-lg font-medium">
-                {experience.company}
-              </p>
+            <div class="grid grid-cols-2 sm:flex sm:gap-48">
+              <div class="flex flex-col" >
+                <div class="text-[#ededed] text-lg font-medium dark:text-[#1b1b18]">
+                  {experience.place}
+                </div>
+                <div class="text-[#a1a09a] text-lg font-medium">
+                  {experience.company}
+                </div>
+              </div>
+              <div class="text-[#a1a09a] text-lg font-medium tracking-wide">
+                {experience.date}
+              </div>
             </div>
-            <p class="text-[#a1a09a] text-lg font-medium">{experience.date}</p>
           </div>
           <div class="mt-5">
             <ul class="list-disc text-base font-normal text-[#a1a09a] mt-4 ml-10">
-              <li>
-                {experience.description}
-              </li>
+              <li>{experience.description}</li>
             </ul>
           </div>
         </section>

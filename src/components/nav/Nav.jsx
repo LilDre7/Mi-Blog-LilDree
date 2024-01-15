@@ -5,18 +5,29 @@ import Sun from './icons/Sun';
 import './css/navStyle.css';
 
 const Nav = () => {
-  const [isTheme, setIsTheme] = useState('ligth');
+  const [isTheme, setIsTheme] = useState(
+    localStorage.getItem('theme') || 'light',
+  );
 
   useEffect(() => {
+    // Aplica el tema al cargar la página
+    applyTheme();
+
+    // Guarda el tema en localStorage cada vez que cambia
+    localStorage.setItem('theme', isTheme);
+  }, [isTheme]);
+
+  const applyTheme = () => {
     if (isTheme === 'dark') {
       document.querySelector('html').classList.add('dark');
     } else {
       document.querySelector('html').classList.remove('dark');
     }
-  }, [isTheme]);
+  };
 
   const handleTheme = () => {
-    setIsTheme(isTheme === 'ligth' ? 'dark' : 'ligth');
+    // Cambia el tema
+    setIsTheme(isTheme === 'light' ? 'dark' : 'light');
   };
 
   return (

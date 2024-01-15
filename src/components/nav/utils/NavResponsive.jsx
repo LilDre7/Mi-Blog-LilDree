@@ -4,7 +4,7 @@ import '../css/navStyle.css';
 const NavLinks = () => {
   return (
     <section className="list-menu">
-      <ul className="list-ul flex flex-col md:flex md:flex-row">
+      <ul className="list-ul flex flex-col md:flex md:flex-row dark:text-[#706f6c]">
         <li className="list-li overflow-hidden p-2 md:p-3 text-base font-normal">
           <a className="link-menu text-[#a1a09a] block w-full" href="/">
             Home

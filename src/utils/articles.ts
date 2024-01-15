@@ -14,7 +14,7 @@ const articulos = [
       'Explora el emocionante mundo del desarrollo web utilizando JavaScript y la biblioteca de interfaz de usuario React. Aprenderás a construir aplicaciones web interactivas y modernas mientras descubres las mejores prácticas de desarrollo front-end.',
   },
   {
-    titulo: 'Optimización de Código en Java: Consejos y Trucos',
+    titulo: 'Optimización de Código con Java',
     fechaCreacion: 'Feb 22, 2024',
     imagenURL: '/images/imageBlog/articleJava.jpg',
     descripcion:

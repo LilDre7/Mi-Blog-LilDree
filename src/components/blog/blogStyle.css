@@ -2,7 +2,7 @@
     Page
 --------------------------- */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
   .container {
     display: flex;
     flex-direction: column;
