@@ -2,12 +2,14 @@
     Page
 --------------------------- */
 
+
 @media screen and (min-width: 750px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .preview-container {
     position: fixed;
     top: 0;
@@ -21,14 +23,17 @@
       opacity 0.4s,
       visibility 0.4s;
   }
+
   a:hover h2 {
     transform: translateX(0.6vw);
   }
+
   a:hover .preview-container,
   a:active .preview-container {
     opacity: 1;
     visibility: visible;
   }
+
   .image-container {
     display: flex;
     justify-content: center;
@@ -38,14 +43,17 @@
     opacity: 0.5;
     transition: transform cubic-bezier(0.2, 1, 0.3, 1) 0.8s;
   }
+
   .square img {
     width: 24vw;
     height: auto;
   }
+
   .portrait img {
     width: 20vw;
     height: auto;
   }
+
   .landscape img {
     width: 32vw;
     height: auto;
