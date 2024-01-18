@@ -2,6 +2,10 @@ import { useEffect, useRef } from 'react';
 import articulo from '../../utils/articles';
 import './blogStyle.css';
 
+const tecnlogiasList = ({articulo}) => {
+  console.log(articulo)
+}
+
 const Blog = () => {
     const articulos = articulo.slice(0, 4);
 
@@ -31,7 +35,7 @@ const Blog = () => {
         document.removeEventListener('mousemove', onMouseMove);
       };
     }, []);
-  
+
     return (
       <section className="dark:bg-[#FCFCFC] dark:z-50 mx-auto sm:max-w-[700px]">
         {articulos.map((art) => (
