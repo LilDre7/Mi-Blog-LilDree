@@ -1,3 +1,32 @@
-<h1>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi repellendus numquam rerum quia et voluptate qui dolorem nostrum nesciunt, inventore tempora maxime fugiat suscipit delectus quo reprehenderit earum iste blanditiis.
-</h1>
+---
+import { fade } from 'astro:transitions';
+import Layout from '../../src/layouts/Layout.astro';
+import Nav from '../components/nav/Nav';
+---
+
+<Layout transition:animate="slide" title="Gear | Alvaro Aburto">
+  <section class="w-full dark:bg-[#FCFCFC]">
+    <div
+      class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]"
+      transition:animate="slide"
+    >
+      <Nav client:only />
+    </div>
+    <main
+      transition:animate={fade({ duration: '2s' })}
+      class="min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+    >
+      <h1>Uses</h1>
+      <p>
+        Here's what tech I'm currently using for fitness, coding, videos, and
+        creating.
+      </p>
+      <h2>Fitness / Wellness</h2>
+      <h2>Computer / Office</h2>
+      <h2>Coding</h2>
+      <h2>Audio / Video</h2>
+      <h2>Software</h2>
+      <h2>Other Tech</h2>
+    </main>
+  </section>
+</Layout>
