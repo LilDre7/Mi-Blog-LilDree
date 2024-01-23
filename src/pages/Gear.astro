@@ -2,6 +2,7 @@
 import { fade } from 'astro:transitions';
 import Layout from '../../src/layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
+import gears from '../utils/gears';
 ---
 
 <Layout transition:animate="slide" title="Gear | Alvaro Aburto">
@@ -14,19 +15,105 @@ import Nav from '../components/nav/Nav';
     </div>
     <main
       transition:animate={fade({ duration: '2s' })}
-      class="min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+      class="min-h-screen mt-12 px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
     >
-      <h1>Uses</h1>
+      <h1 class="dark:text-black" >Uses</h1>
       <p>
         Here's what tech I'm currently using for fitness, coding, videos, and
         creating.
       </p>
-      <h2>Fitness / Wellness</h2>
-      <h2>Computer / Office</h2>
-      <h2>Coding</h2>
-      <h2>Audio / Video</h2>
-      <h2>Software</h2>
-      <h2>Other Tech</h2>
+      {
+        gears.map((gear, index) => (
+          <div>
+            <div>
+              <h2 class="dark:text-black" >Fitness / Wellness</h2>
+              <ul>
+                <li>{gear.gym.protein}</li>
+              </ul>
+
+              <h2 class="dark:text-black" >Computer / Office</h2>
+              <ul>
+                <li>{gear.computer.pc}</li>
+                <li>{gear.computer.monitor}</li>
+                <li>{gear.computer.mouse}</li>
+                <li>{gear.computer.keyboard}</li>
+                <li>{gear.computer.mousepad}</li>
+                <li>{gear.computer.headset}</li>
+                <li>{gear.computer.tablet}</li>
+              </ul>
+
+              <h2 class="dark:text-black" >Coding</h2>
+              <ul>
+                <li>{gear.coding.editor}</li>
+                <li>{gear.coding.theme}</li>
+                <li>{gear.coding.terminal}</li>
+                <li>{gear.coding.ide}</li>
+              </ul>
+
+              <h2 class="dark:text-black" >Audio / Video</h2>
+              <ul>
+                <li>{gear.audio.xiaomi}</li>
+              </ul>
+
+              <h2 class="dark:text-black" >Software</h2>
+              <ul>
+                <li>{gear.software.password}</li>
+                <li>{gear.software.web}</li>
+                <li>{gear.software.github}</li>
+                <li>{gear.software.music}</li>
+                <li>{gear.software.notes}</li>
+                <li>{gear.software.todo}</li>
+                <li>{gear.software.calendar}</li>
+              </ul>
+
+              <h2 class="dark:text-black" >Other Tech</h2>
+              <ul>
+                <li>{gear.otherTech.watch}</li>
+                <li>{gear.otherTech.phone}</li>
+                <li>{gear.otherTech.headphones}</li>
+                <li>{gear.otherTech.playStation}</li>
+              </ul>
+            </div>
+          </div>
+        ))
+      }
     </main>
   </section>
 </Layout>
+
+<style>
+  h1 {
+    color: #ededec;
+    font-size: 33px;
+    line-break: anywhere;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    margin: 0px 0px 32px;
+  }
+  p {
+    color: #d4d4d4;
+    font-weight: 500;
+    margin: 8px 0px 32px;
+    font-size: 17px;
+  }
+  h2 {
+    color: #ededed;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+  ul {
+    margin: 0px 0px 28px;
+    padding: 0px 0px 0px 26px;
+  }
+  li {
+    font-size: 18px;
+    list-style: circle;
+    color: #a0a0a0;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 8px 0px;
+    padding: 0px 0px 0px 6px;
+    text-align: left;  
+  }
+</style>

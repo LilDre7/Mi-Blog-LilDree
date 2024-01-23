@@ -1,24 +1,42 @@
 const gears = [
     {
-    
-        gym: {
-            protein: "Protein Powder: PEsciencereferral",
-        },
-        computer: {
-            pc: "13 Acer Aspire 5",
-            monitor: "ONITOR SMART LED 32 SAMSUNG M80B 4MS - 60HZ - 3840X2160 - VERDE",
-            mouse: "MOUSE GAMING STEELSERIES PRIME",
-            keyboard: "TECLADO GAMING PRIMUS BALLISTA 90T - RGB - STAR WARS AHSOKA TANO",
-            mousepad: "MOUSEPAD GAMING PRIME",
-            headset: "HEADSET GAMING PRIME",
-            tablet: "TABLET LENOVO TAB M8 8 - 2GB - 32GB - WIFI - GRIS",
-        },
-        coding: {
-            editor: "Editor: CURSOR AI",
-            theme: "Dracula soft theme",
-            terminal: "Terminal: PowerShall theme atomic",
-        }
-    }
-]
-
-export default gears;
+      gym: {
+        protein: 'Protein Powder: PEscience referral',
+      },
+      computer: {
+        pc: 'Acer Aspire 5 (13")',
+        monitor: 'Samsung M80B 32" Smart LED Monitor - 4MS - 60HZ - 3840X2160 - Green',
+        mouse: 'SteelSeries Prime Gaming Mouse',
+        keyboard: 'Primus Ballista 90T Gaming Keyboard - RGB - Star Wars Ahsoka Tano',
+        mousepad: 'Prime Gaming Mousepad',
+        headset: 'Prime Gaming Headset',
+        tablet: 'Lenovo Tab M8 8" Tablet - 2GB - 32GB - WiFi - Gray',
+      },
+      coding: {
+        editor: 'Cursor AI Editor',
+        theme: 'Dracula Soft Theme',
+        terminal: 'PowerShell - Atomic Theme',
+        ide: 'Visual Studio Code',
+      },
+      audio: {
+        xiaomi: 'Xiaomi Poco X3',
+      },
+      software: {
+        password: '1Password',
+        web: 'Brave',
+        github: 'GitHub',
+        music: 'Spotify',
+        notes: 'Notion',
+        todo: 'Todoist',
+        calendar: 'Notion Calendar',
+      },
+      otherTech: {
+        watch: 'Huawei Watch Fit',
+        phone: 'Xiaomi Poco X3',
+        headphones: 'Sony WH-1000XM4',
+        playStation: 'PlayStation 3 & 4',
+      },
+    },
+  ];
+  
+  export default gears;
