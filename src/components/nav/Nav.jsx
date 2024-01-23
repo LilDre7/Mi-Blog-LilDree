@@ -37,7 +37,7 @@ const Nav = () => {
           <a href="/">
             <img
               className="w-10 h-10 rounded-md cursor-pointer"
-              src="/logoPersonalWhite.png"
+              src="/images/logoPersonalWhite.png"
               alt="logoPersonal"
             />
           </a>
