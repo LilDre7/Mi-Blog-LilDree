@@ -66,5 +66,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## 🐋 Commands FOR Docker
 
 ```sh
-npm run start --templete
+npm run start --templetes
 ```
