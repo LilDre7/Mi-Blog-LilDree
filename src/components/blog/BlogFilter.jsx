@@ -33,7 +33,7 @@ const BlogFilter = () => {
   return (
     <section className="dark:bg-[#FCFCFC] dark:z-50 mx-auto sm:max-w-[700px]">
       <div className='my-10'>
-        <input
+       <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           placeholder="Buscar"
