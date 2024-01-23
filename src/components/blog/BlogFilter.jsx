@@ -3,6 +3,10 @@ import articulos from '../../utils/articles';
 import './blogStyle.css';
 
 const BlogFilter = () => {
+  // ** Filtrado de los articulos
+  
+
+  //** Efecto de la vista previa del articulo
   const projectPreviewsRef = useRef([]);
   const throttleTimerRef = useRef(null);
 
@@ -32,24 +36,35 @@ const BlogFilter = () => {
 
   return (
     <section className="dark:bg-[#FCFCFC] dark:z-50 mx-auto sm:max-w-[700px]">
-      <div className='my-10'>
-       <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
-          placeholder="Buscar"
-        />
+      {/* Barra de búsqueda */}
+      <div className='my-10 mb-28 flex flex-col gap-2'>
+        <div className='flex items-center gap-2 rounded-full bg-[#282828] w-fit focus-within:outline' >
+          <label className='flex items-center pl-2.5' htmlFor="">
+            <img className='w-5 h-5' src="/images/svgIcons/search.svg" alt="" />
+          </label>
+          <input
+            className="h-10 pr-4 bg-transparent outline-none placeholder:text-[#706f6c] placeholder:font-medium placeholder:text-lg"
+            type="text"
+            placeholder="Buscar..."
+          />
+        </div>
       </div>
+
+      {/* Lista de artículos */}
       {articulos.map((art) => (
-        <div className="container">
-          <a className="flex justify-between py-2" href="/">
+        <div className="container" key={art.id}>
+          <a className="flex items-center justify-between py-2" href="/">
+            {/* Detalles del artículo */}
             <div className="md:flex md:gap-8 md:py-3">
-              <p className="text-[#A1A09A] font-medium md:w-36">
+              <p className="text-[#A1A09A] font-medium w-36">
                 {art.fechaCreacion}
               </p>
-              <h2 className="text-[#EDEDEC] text-lg tracking-tight w-52 sm:w-full font-semibold dark:text-[#1B1B18]">
-                {art.titulo}
-              </h2>
             </div>
+            <h2 className="text-[#EDEDEC] text-lg tracking-tight w-52 sm:w-full font-semibold dark:text-[#1B1B18]">
+              {art.titulo}
+            </h2>
+
+            {/* Vista previa del artículo */}
             <div className="flex py-4 dark:z-50 preview-container">
               <div
                 className="aspect-square min-w-24 w-24 h-20 relative drop-shadow-sm"
@@ -66,6 +81,7 @@ const BlogFilter = () => {
         </div>
       ))}
     </section>
+
   );
 };
 
