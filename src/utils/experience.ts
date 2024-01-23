@@ -9,7 +9,7 @@ const experience = [
   },
   {
     image: '/images/logoPersonalWhite.png',
-    place: 'Front-end',
+    place: 'Back-end',
     company: 'Eaton',
     date: 'Jul 2022 - Aug 2022',
     description:

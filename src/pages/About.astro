@@ -8,40 +8,60 @@ import { fade } from 'astro:transitions';
 import AboutImage from '../components/about/AboutImage.astro';
 ---
 
-<Layout title="About | Alvaro Aburto">
-  <section class="w-full dark:bg-[#FCFCFC]">
+<!-- Layout component utilizado con el título "About | Alvaro Aburto" -->
+<Layout
+  transition:animate={fade({ duration: '2s' })}
+  title="About | Alvaro Aburto"
+>
+  {/* Sección principal */}
+  <section transition:animate="initial" class="w-full dark:bg-[#FCFCFC]">
     <div
       class="w-full relative md:sticky top-0 z-20 bg-[#101010] dark:bg-[#FCFCFC]"
       transition:animate="slide"
     >
+      {/* Componente de navegación específico para clientes */}
       <Nav client:only />
     </div>
+
+    {/* Contenido principal */}
     <main
-      transition:animate={fade({ duration: '2s' })}
       class="min-h-screen px-6 md:px-6 pt-1 pb-24 md:pb-44 max-w-[700px] mx-auto"
+      transition:animate={fade({ duration: '2s' })}
     >
-      <div transition:animate={fade({ duration: '2s' })} class="mx-auto mt-[54px]">
+      <div
+        class="mx-auto mt-[54px]"
+        transition:animate={fade({ duration: '2s' })}
+      >
+        {/* Título de la sección "About Me" */}
         <h1
           class="text-3xl tracking-tight antialiased text-[#EDEDEC] font-bold dark:text-[#1B1B18]"
         >
           About Me
         </h1>
+        {/* Subtítulo */}
         <p
           class="text-[#a1a09a] mt-1 flex font-medium tracking-tight dark:text-[#1B1B18]"
         >
           Just a quick glimpse
         </p>
+        {/* Componente de imagen de la sección "About Me" */}
         <div class="pb-14">
           <AboutImage />
         </div>
       </div>
 
-      <section transition:animate={fade({ duration: '2s' })} class="flex flex-col md:flex-row md:gap-20 md:mt-16">
+      {/* Sección de información sobre el desarrollador */}
+      <section
+        class="flex flex-col md:flex-row md:gap-20 md:mt-16"
+        transition:animate={fade({ duration: '2s' })}
+      >
         <h2 class="text-lg md:w-20 dark:text-[hsl(45, 2%, 43%)] text-[#a1a09a]">
           About
         </h2>
         <div class="flex flex-col gap-8 font-normal tracking-wide">
+          {/* Párrafos con información sobre el desarrollador */}
           <p class="dark:text-[#1b1b18]">I'm Alvaro Aburto!</p>
+          {/* Información sobre la educación y pasiones */}
           <p class="dark:text-[#1b1b18]">
             I'm a college student at
             <a
@@ -78,52 +98,66 @@ import AboutImage from '../components/about/AboutImage.astro';
         </div>
       </section>
 
+      {/* Sección de contacto */}
       <section class="flex mt-12 flex-col md:flex-row md:gap-14">
         <h2 class="text-lg md:w-24 text-[#a1a09a]">Connect</h2>
         <div class="flex flex-col w-full gap-8">
+          {/* Información de contacto y enlaces a redes sociales */}
           <p class="font-semibold dark:text-[#1b1b18]">
             Have a question or just want to chat? Feel free to
             <a href="mailto:diego.thonycb@gmail.com" class="underline"
               >email me</a
             >. Try finding me anywhere else at @diego__cb
           </p>
+          {/* Componente de redes sociales */}
           <Socials />
         </div>
       </section>
 
-      <section class="flex mt-12 flex-col md:flex-row md:gap-9">
+      {/* Sección de habilidades */}
+      <section class="flex mt-7 flex-col md:flex-row md:gap-9">
         <h2 class="text-lg md:w-24 text-[#a1a09a]">Skills</h2>
         <div class="flex flex-col w-full gap-3">
+          {/* Información sobre tecnologías y experiencia */}
           <p class="font-semibold dark:text-[#1b1b18]">
             Technologies I'm familiar with.
           </p>
           <p class="font-semibold text-lg mt-3 dark:text-[#1b1b18]">
             2+ years of development experience.
           </p>
+          {/* Componente de habilidades */}
           <Skill client:only />
         </div>
       </section>
 
+      {/* Sección de experiencia laboral */}
       <section class="flex mt-12 flex-col md:flex-row md:gap-9">
         <h2 class="text-lg md:w-24 text-[#a1a09a] dark:text-[#706f6c]">Work</h2>
         <div class="flex flex-col w-full gap-3">
+          {/* Información sobre oportunidades laborales */}
           <p class="font-semibold dark:text-[#1b1b18]">
             Some of the opportunities I've got to be a part of
           </p>
-          <div class="-mt-5" >
+          {/* Componente de experiencias laborales */}
+          <div class="-mt-5">
             <Experiences />
           </div>
         </div>
       </section>
 
+      {/* Sección de proyectos personales */}
       <section class="flex mt-12 flex-col md:flex-row md:gap-9">
-        <h2 class="text-lg md:w-28 text-[#a1a09a] dark:text-[#706f6c]">Side projects</h2>
+        <h2 class="text-lg md:w-28 text-[#a1a09a] dark:text-[#706f6c]">
+          Side projects
+        </h2>
         <div class="flex flex-col w-full gap-3">
+          {/* Información sobre proyectos personales */}
           <p class="font-semibold dark:text-[#1b1b18]">
             I enjoy exploring my interests through projects
           </p>
-          <div class="-mt-5" >
-            <!-- <Experiences /> -->
+          {/* Espacio para futuros proyectos */}
+          <div class="-mt-5">
+            {/* <!-- <Experiences /> --> */}
           </div>
         </div>
       </section>

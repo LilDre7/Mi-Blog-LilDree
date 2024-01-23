@@ -61,18 +61,18 @@ const BlogFilter = () => {
       </div>
 
       {/* Lista de artículos */}
-    {filteredArticulos.length === 0 ? <p className='font-bold text-[#ff3232] tracking-wide' >No post found</p> : filteredArticulos.map((art) => (
+      {filteredArticulos.length === 0 ? <p className='font-bold text-[#ff3232] tracking-wide' >No post found</p> : filteredArticulos.map((art) => (
         <div className="container" key={art.id}>
           <a className="flex items-center justify-between py-2" href="/">
             {/* Detalles del artículo */}
-            <div className="md:flex md:gap-8 md:py-3">
+            <div className="md:flex-col md:gap-8 md:py-3">
               <p className="text-[#A1A09A] font-medium w-36">
                 {art.fechaCreacion}
               </p>
+              <h2 className="text-[#EDEDEC] text-lg tracking-tight w-52 sm:w-full font-semibold dark:text-[#1B1B18]">
+                {art.titulo}
+              </h2>
             </div>
-            <h2 className="text-[#EDEDEC] text-lg tracking-tight w-52 sm:w-full font-semibold dark:text-[#1B1B18]">
-              {art.titulo}
-            </h2>
 
             {/* Vista previa del artículo */}
             <div className="flex py-4 dark:z-50 preview-container">
