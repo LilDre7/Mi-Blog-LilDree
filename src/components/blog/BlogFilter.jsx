@@ -4,7 +4,15 @@ import './blogStyle.css';
 
 const BlogFilter = () => {
   // ** Filtrado de los articulos
-  
+  const [isFilter, setFilter] = useState('');
+  const [filteredArticulos, setFilteredArticulos] = useState(articulos);
+
+  useEffect(() => {
+    const tecnoFiltradas = articulos.filter((art) =>
+      art.titulo.toLowerCase().includes(isFilter.toLowerCase()),
+    );
+    setFilteredArticulos(tecnoFiltradas);
+  }, [isFilter]);
 
   //** Efecto de la vista previa del articulo
   const projectPreviewsRef = useRef([]);
@@ -37,21 +45,23 @@ const BlogFilter = () => {
   return (
     <section className="dark:bg-[#FCFCFC] dark:z-50 mx-auto sm:max-w-[700px]">
       {/* Barra de búsqueda */}
-      <div className='my-10 mb-28 flex flex-col gap-2'>
-        <div className='flex items-center gap-2 rounded-full bg-[#282828] w-fit focus-within:outline' >
-          <label className='flex items-center pl-2.5' htmlFor="">
-            <img className='w-5 h-5' src="/images/svgIcons/search.svg" alt="" />
+      <div className="my-10 mb-28 flex flex-col gap-2">
+        <div className="flex items-center gap-2 rounded-full shadow-[#706f6c] shadow-sm bg-[#282828] w-fit dark:bg-[#ededed]">
+          <label className="flex items-center pl-2.5" htmlFor="">
+            <img className="w-5 h-5" src="/images/svgIcons/search.svg" alt="" />
           </label>
           <input
-            className="h-10 pr-4 bg-transparent outline-none placeholder:text-[#706f6c] placeholder:font-medium placeholder:text-lg"
+            className="h-10 pr-4 bg-transparent outline-none placeholder:text-[#706f6c] placeholder:font-medium placeholder:text-lg dark:text-black "
             type="text"
             placeholder="Buscar..."
+            value={isFilter}
+            onChange={(e) => setFilter(e.target.value)}
           />
         </div>
       </div>
 
       {/* Lista de artículos */}
-      {articulos.map((art) => (
+    {filteredArticulos.length === 0 ? <p className='font-bold text-[#ff3232] tracking-wide' >No post found</p> : filteredArticulos.map((art) => (
         <div className="container" key={art.id}>
           <a className="flex items-center justify-between py-2" href="/">
             {/* Detalles del artículo */}
@@ -81,7 +91,6 @@ const BlogFilter = () => {
         </div>
       ))}
     </section>
-
   );
 };
 
