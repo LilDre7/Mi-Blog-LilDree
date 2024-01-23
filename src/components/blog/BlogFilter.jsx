@@ -1,35 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import articulo from '../../utils/articles';
+import articulos from '../../utils/articles';
 import './blogStyle.css';
 
-const TecnoList = (articulo) => {
-  const [filter, setFilter] = useState('');
-
-  const tecnlogiasFiltradas = articulo.filter((art) =>
-    art.tecnologias.includes(filter),
-  );
-
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Filtrar tecnologías"
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-      />
-
-      <ul>
-        {tecnlogiasFiltradas.map((art) => (
-          <li>{art.tecnologias}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const Blog = () => {
-  const articulos = articulo.slice(0, 4);
-
+const BlogFilter = () => {
   const projectPreviewsRef = useRef([]);
   const throttleTimerRef = useRef(null);
 
@@ -59,8 +32,12 @@ const Blog = () => {
 
   return (
     <section className="dark:bg-[#FCFCFC] dark:z-50 mx-auto sm:max-w-[700px]">
-      <div className='bg-red-600' >
-        <TecnoList />
+      <div className='my-10'>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Buscar"
+        />
       </div>
       {articulos.map((art) => (
         <div className="container">
@@ -92,4 +69,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogFilter;

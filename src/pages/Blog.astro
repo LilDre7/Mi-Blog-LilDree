@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav';
 import { fade } from 'astro:transitions';
-import BlogHeader from '../components/blog/BlogHeader';
+import BlogFilter from "../components/blog/BlogFilter"
 ---
 
 <Layout title="Blog | Alvaro Aburto">
@@ -25,7 +25,7 @@ import BlogHeader from '../components/blog/BlogHeader';
           6 posts about code, weight-lifting, food, and more ...
         </p>
         <section>
-          <BlogHeader />
+          <BlogFilter client:only />
         </section>
       </section>
     </main>
