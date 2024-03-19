@@ -1,4 +1,4 @@
-# Portafolio Blog de Alvaro Aburto
+# Portafolio Blog de Alvaro Aburto uuuuu
 
 ¡Bienvenido a mi Portafolio Blog! Este proyecto fue creado en aproximadamente 3 días y está diseñado para mostrar mi experiencia como desarrollador web y móvil full-stack. Aquí tienes una breve descripción de las características clave de este proyecto:
 
